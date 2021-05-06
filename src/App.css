@@ -1,0 +1,36 @@
+.nav-items{
+    text-decoration: none;
+    font-size: 2rem;
+}
+.main-title{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 3rem;
+}
+
+ /* Products */
+ .grid-cont{
+     display: grid;
+     grid-template-columns: 1fr 4fr;
+ }
+ .prod-grid-item{
+     padding: 1rem;
+ }
+
+ /* //Filters */
+ label{
+     display: block;
+     padding: 1rem;
+ }
+
+ /* Cart */
+ .page-title{
+     border-bottom: 1px solid black;
+     font-style: italic;
+ }
+
+ .icon-div{
+     margin-right: 2rem;
+ }
+ .nav-bar{
+     height: 6rem;
+ }
