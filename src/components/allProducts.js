@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
-import { FilterContext } from "./Filters/filterContext";
-import {CartButton} from './Buttons/cart-button'
-import { WishButton } from './Buttons/wish-button'
-import {ViewItem} from './Buttons/view-item'
+import {useFilter} from './Filters/filterContext'
+import {WishButton, ViewItem} from './Buttons/index'
+
 
 export const ProductsDisplay = () => {
-  const { filteredData } = useContext(FilterContext);
+  const { filteredData } = useFilter()
 
   return (
     <div style={{textAlign: "center"}} >

@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { FilterContext } from "./filterContext";
+import {useFilter} from './filterContext'
 
 export const FilterDisplay = () => {
-  const { dispatch } = useContext(FilterContext);
+  const { dispatch } = useFilter()
   return (
     <div>
       <fieldset>

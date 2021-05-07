@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
-import { WishContext } from "./wishContext";
 import { WishButton } from '../Buttons/wish-button';
 import { CartButton } from '../Buttons/cart-button'
+import {useWish} from './wishContext';
 
 export const WishDisplay = () => {
-  const { wish } = useContext(WishContext);
+  const { wish } = useWish()
   return (
     <div style={{textAlign: "center"}}>
       {wish.map((product) => {

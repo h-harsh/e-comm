@@ -1,9 +1,7 @@
-import React, { useContext } from "react";
-import { CartContext } from "./cartContext";
-import { CartButton } from "../Buttons/cart-button";
+import {useCart} from './cartContext'
 
 export const CartDisplay = () => {
-  const { state, dispatch, cart } = useContext(CartContext);
+  const { state, dispatch, cart } = useCart()
 
   return (
     <div style={{textAlign: "center"}}>
@@ -46,7 +44,6 @@ export const CartDisplay = () => {
               >
                 Remove
               </button>
-              {/* <CartButton product={product} /> */}
             </div>
           </div>
         );

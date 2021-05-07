@@ -1,4 +1,5 @@
-import { createContext, useReducer, useEffect, useState } from "react";
+import { createContext, useReducer, useEffect, useState, useContext } from "react";
+import {filterFunc} from './filterReducer'
 import axios from 'axios'
 
 export const FilterContext = createContext();
@@ -49,15 +50,7 @@ export const FilterProvider = ({ children }) => {
   );
 };
 
-const filterFunc = (state, { type, payload }) => {
-  switch (type) {
-    case "SORT":
-      return { ...state, sortBy: payload };
-    case "SHOW-IN-STOCK-ONLY":
-      return { ...state, showAll: !state.showAll };
-    case "FAST-DELIVERY":
-      return { ...state, fastDeliveryOnly: !state.fastDeliveryOnly };
-    default:
-      break;
-  }
+
+export const useFilter = () => {
+  return useContext(FilterContext);
 };

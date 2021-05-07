@@ -1,8 +1,7 @@
-import { CartContext } from '../Cart/cartContext'
-import { useContext } from 'react'
+import {useCart} from '../Cart/cartContext'
 
 export const CartButton = ({ product }) => {
-    const { dispatch, cart } = useContext(CartContext);
+    const { dispatch, cart } = useCart()
     return (
         <button
             className="btn btn-primary"
