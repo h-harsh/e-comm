@@ -6,7 +6,7 @@ import {ProductDetails, Cart, WishList, Products} from './Pages/index'
 
 export default function App() {
   return (
-    <div classNameName="App">
+    <div className="App">
       <NavBar />
       <Routes>
         <Route path="/" element={<Products />} />

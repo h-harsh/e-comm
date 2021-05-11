@@ -5,8 +5,8 @@ import { useCart } from './Cart/cartContext'
 import { useWish } from './Wishlist/wishContext'
 
 export const NavBar = () => {
-    const { cart } = useCart()
-    const { wish } = useWish()
+    const { state } = useCart()
+    const { wishState } = useWish()
     return (
         <div className="nav-bar">
             <ul className="nav-list">
@@ -20,13 +20,13 @@ export const NavBar = () => {
                     {/* Cart {cart.length} */}
                     <div class="icon-div">
                         <ShoppingCartOutlined />
-                        <span class="icon-count icon-count-sm red-light ">{cart.length}</span>
+                        <span class="icon-count icon-count-sm red-light ">{state.length}</span>
                     </div>
                 </Link>
                 <Link className="nav-items" to="/wishlist">
-                    <div class="icon-div">
+                    <div className="icon-div">
                         <HeartOutlined />
-                        <span class="icon-count icon-count-sm red-light ">{wish.length}</span>
+                        <span className="icon-count icon-count-sm red-light ">{wishState.length}</span>
                     </div>
                 </Link>
             </ul>

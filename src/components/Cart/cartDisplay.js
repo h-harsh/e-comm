@@ -1,16 +1,15 @@
 import {useCart} from './cartContext'
 
 export const CartDisplay = () => {
-  const { state, dispatch, cart } = useCart()
-
+  const { state, increaseQuantity, decreaseQuantity, removeFromCart } = useCart()
   return (
     <div style={{textAlign: "center"}}>
-      {cart.map((product) => {
+      {state.map((product) => {
         return (
           <div style={{ display: "inline-block", margin: "1.3rem", padding: "1rem" }}>
-            <div class="card">
-              <span class="prod-badge">{product.offer}</span>
-              <img class="prod-img" src={product.image} alt="" />
+            <div className="card">
+              <span className="prod-badge">{product.offer}</span>
+              <img className="prod-img" src={product.image} alt="" />
               <h3>{product.name}</h3>
               {product.inStock && <div> In Stock </div>}
               {!product.inStock && <div> Out of Stock </div>}
@@ -19,28 +18,28 @@ export const CartDisplay = () => {
               ) : (
                 <div> 3 days minimum </div>
               )}
-              <div class="price">
+              <div className="price">
                 <p>₹ {product.price}</p>
               </div>
               <p>Rating {product.ratings}</p>
-              <div class="prod-btns">
+              <div className="prod-btns">
                 <button
-                  class="btn btn-primary"
-                  onClick={() => dispatch({ type: "LESS1", payload: product })}
+                  className="btn btn-primary"
+                  onClick={() => decreaseQuantity(product)}
                 >
                   -
                 </button>
                 <p> Quantity {product.qty}</p>
                 <button
-                  class="btn btn-primary"
-                  onClick={() => dispatch({ type: "ADD1", payload: product })}
+                  className="btn btn-primary"
+                  onClick={() => increaseQuantity(product)}
                 >
                   +
                 </button>
               </div>
               <button
-                class="btn btn-secondary"
-                onClick={() => dispatch({ type: "REMOVE", payload: product })}
+                className="btn btn-secondary"
+                onClick={() => removeFromCart(product)}
               >
                 Remove
               </button>
