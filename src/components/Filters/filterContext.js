@@ -1,24 +1,32 @@
-import { createContext, useReducer, useEffect, useState, useContext } from "react";
-import {filterFunc} from './filterReducer'
-import axios from 'axios'
+import {
+  createContext,
+  useReducer,
+  useEffect,
+  useState,
+  useContext,
+} from "react";
+import { filterFunc } from "./filterReducer";
+import axios from "axios";
 
 export const FilterContext = createContext();
 
 export const FilterProvider = ({ children }) => {
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([]);
+  const [status, setStatus] = useState("");
   const [{ fastDeliveryOnly, showAll, sortBy }, dispatch] = useReducer(
     filterFunc,
     {
       fastDeliveryOnly: false,
       showAll: true,
-      sortBy: null
+      sortBy: null,
     }
   );
-  
+
   useEffect(() => {
-    axios.get('https://e-commerce-backend.harshporwal1.repl.co/products')
-    .then(response => setProducts(response.data.products))
-  }, [])
+    axios
+      .get("https://e-commerce-backend.harshporwal1.repl.co/products")
+      .then((response) => setProducts(response.data.products));
+  }, []);
 
   const sortingData = (productsList, sortBy) => {
     if (sortBy === "HIGH-TO-LOW") {
@@ -43,13 +51,22 @@ export const FilterProvider = ({ children }) => {
   const sortedData = sortingData(products, sortBy);
   const filteredData = filteringData(sortedData, fastDeliveryOnly, showAll);
 
+  const searchedFilteredDataFunc = (filteredDatas) => {
+    return filteredDatas.filter((value) => {
+      if (value.name.toLowerCase().includes(status.toLocaleLowerCase())) {
+        return value;
+      }
+      return null;
+    });
+  };
+const searchedFilteredData = searchedFilteredDataFunc(filteredData)
+
   return (
-    <FilterContext.Provider value={{ filteredData, dispatch }}>
+    <FilterContext.Provider value={{ searchedFilteredData, dispatch, products, setStatus, status }}>
       {children}
     </FilterContext.Provider>
   );
 };
-
 
 export const useFilter = () => {
   return useContext(FilterContext);

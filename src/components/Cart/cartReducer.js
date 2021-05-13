@@ -10,7 +10,7 @@ export const cartFunc = (state, { type, payload }) => {
 
       case "INCREASE_QTY":
         return state = state.map(item => {
-          if(item.id === payload.id){
+          if(item._id === payload._id){
             return {...payload, qty: payload.qty + 1}
           } else {
             return item
@@ -19,7 +19,7 @@ export const cartFunc = (state, { type, payload }) => {
 
       case "DECREASE_QTY":
         return state = state.map(item => {
-          if(item.id === payload.id){
+          if(item._id === payload._id){
             return {...payload, qty: payload.qty - 1}
           } else {
             return item
@@ -27,7 +27,7 @@ export const cartFunc = (state, { type, payload }) => {
         })
 
       case "REMOVE_FROM_CART":
-        return state = state.filter(item => item.id !== payload.id);
+        return state = state.filter(item => item._id !== payload._id);
         
       default:
         break;

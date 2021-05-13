@@ -24,9 +24,9 @@ export const WishProvider = ({ children }) => {
       console.log("error")
     }
   }
-console.log(state)
+// console.log(state)
   const removeFromWishList = async (product) => {
-    const response = await axios.delete(`${baseUrl}/${product.id}`)
+    const response = await axios.delete(`${baseUrl}/${product._id}`)
     if (response.status === 200) {
       dispatch({ type: "REMOVE_FROM_WISHLIST", payload: product })
     } else {

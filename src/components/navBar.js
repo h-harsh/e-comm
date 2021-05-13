@@ -3,6 +3,7 @@ import { ShoppingCartOutlined } from '@ant-design/icons';
 import { HeartOutlined } from '@ant-design/icons';
 import { useCart } from './Cart/cartContext'
 import { useWish } from './Wishlist/wishContext'
+import {SearchBar} from './Search bar/searchBar'
 
 export const NavBar = () => {
     const { state } = useCart()
@@ -14,7 +15,8 @@ export const NavBar = () => {
                     Products
                     </Link>
             </ul>
-            <h1 className="main-title">E-Commerce</h1>
+            {/* <h1 className="main-title">E-Commerce</h1> */}
+            <SearchBar />
             <ul className="nav-list">
                 <Link className="nav-items" to="/cart">
                     {/* Cart {cart.length} */}
