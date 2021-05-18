@@ -1,38 +1,35 @@
 import { Link } from "react-router-dom";
-import { ShoppingCartOutlined } from '@ant-design/icons';
-import { HeartOutlined } from '@ant-design/icons';
-import { useCart } from './Cart/cartContext'
-import { useWish } from './Wishlist/wishContext'
-import {SearchBar} from './Search bar/searchBar'
+import { useCart } from "./Cart/cartContext";
+import { useWish } from "./Wishlist/wishContext";
+import { SearchBar } from "./Search bar/searchBar";
+// import '../App.css'
 
 export const NavBar = () => {
-    const { state } = useCart()
-    const { wishState } = useWish()
-    return (
-        <div className="nav-bar">
-            <ul className="nav-list">
-                <Link className="nav-items" to="/">
-                    Products
-                    </Link>
-            </ul>
-            {/* <h1 className="main-title">E-Commerce</h1> */}
-            <SearchBar />
-            <ul className="nav-list">
-                <Link className="nav-items" to="/cart">
-                    {/* Cart {cart.length} */}
-                    <div class="icon-div">
-                        <ShoppingCartOutlined />
-                        <span class="icon-count icon-count-sm red-light ">{state.length}</span>
-                    </div>
-                </Link>
-                <Link className="nav-items" to="/wishlist">
-                    <div className="icon-div">
-                        <HeartOutlined />
-                        <span className="icon-count icon-count-sm red-light ">{wishState.length}</span>
-                    </div>
-                </Link>
-            </ul>
-        </div>
-
-    )
-}
+  const { state } = useCart();
+  const { wishState } = useWish();
+  return (
+    <nav>
+      <div class="nav-sub-sec nleft">
+        <p class="nav-itm nav-icons">
+          <i class="fab fa-drupal"></i>
+        </p>
+        <Link class="nav-itm nav-itm-text" to="/">
+          Home{" "}
+        </Link>
+        <Link class="nav-itm nav-itm-text" to="/">
+          Products{" "}
+        </Link>
+      </div>
+      <div class="nav-sub-sec">
+        <SearchBar class="search-thing" />
+        {/* <button class="btn btn-link1">X</button> */}
+      </div>
+      <div class="nav-sub-sec nright">
+        <Link to="/cart" class="nav-itm"><i class="fas fa-shopping-cart"></i></Link>
+        <p>{state.length}</p>
+        <Link to="/wishlist" class="nav-itm"><i class="far fa-heart"></i></Link>
+        <p>{wishState.length}</p>
+      </div>
+    </nav>
+  );
+};

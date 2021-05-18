@@ -14,15 +14,44 @@ export const WishButton = ({ product }) => {
 
   return (<>
     { idArray.includes(product._id || product.id) ?
-      <button className="btn" onClick={() => removeFromWishList(product)} >
-        ❤️
+      <button className="icon-btn" onClick={() => removeFromWishList(product)} >
+        <i class="fas fa-heart"></i>
       </button>
       :
-      <button className="btn" onClick={() => addToWishList(product)} >
-        🤍
+      <button className="icon-btn" onClick={() => addToWishList(product)} >
+        <i class="far fa-heart"></i>
       </button>
 
     }
   </>
   );
 };
+
+export const WishButton2 = ({ product }) => {
+  const { addToWishList, removeFromWishList, wishState } = useWish();
+  const [idArray, setIdArray] = useState([])
+
+  useEffect(() => {
+    setIdArray(wishState.map(item => {
+      return item.id || item._id
+    }))
+  }, [wishState])
+
+
+  return (<>
+    { idArray.includes(product._id || product.id) ?
+      <button className="nm-btn2 horiz" onClick={() => removeFromWishList(product)} >
+        <i class="fas fa-heart"></i>
+      </button>
+      :
+      <button className="nm-btn2 horiz" onClick={() => addToWishList(product)}> 
+     <i class="far fa-heart"></i> 
+    </button> 
+     
+
+    }
+  </>
+  );
+};
+
+

@@ -31,15 +31,15 @@ export const CartButton = ({ product }) => {
     <>
       {idArray.includes(product._id || product.id) ? (
         <Link to="/cart">
-          <button className="btn btn-secondary">Go To Cart</button>
+          <button className="nm-btn2">Go To Cart</button>
         </Link>
       ) : (
         <button
-          className={product.inStock ? "btn btn-primary" : "btn btn-secondary"}
+          className={product.inStock ? "sp-button" : "nm-btn2 btn2-disabled"}
           disabled={product.inStock ? false : true}
           onClick={() => addToCart(product)}
         >
-          {loading ? "Adding" : "Add to cart"}
+          <span>{loading ? "Adding" : "Add to cart"}</span>
         </button>
       )}
     </>

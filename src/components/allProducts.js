@@ -8,7 +8,7 @@ export const ProductsDisplay = () => {
     <div style={{textAlign: "center"}} >
       {searchedFilteredData.map((product) => {
         return (
-          <ProductCard product={product} viewBtn wishBtn />
+          <ProductCard product={product} viewBtn wishBtn cartBtn />
         );
       })}
     </div>

@@ -6,12 +6,12 @@ import { WishButton } from '../components/Buttons/wish-button'
 
 export const ProductDetails = () => {
     const { productId } = useParams();
-    const { filteredData } = useFilter()
+    const { searchedFilteredData } = useFilter()
 
     function getProductDetails(product, productId) {
         return product.find((prod) => prod._id === productId);
     }
-    const product = getProductDetails(filteredData, productId);
+    const product = getProductDetails(searchedFilteredData, productId);
 
     return (
         <div style={{ margin: " 10% 25%" }}>

@@ -1,14 +1,15 @@
 
 import {ProductCard} from '../producrCard'
 import {useCart} from './cartContext'
+import {CartCard} from '../cartProductCard'
 
 export const CartDisplay = () => {
   const { state} = useCart();
   return (
-    <div style={{ textAlign: "center" }}>
+    <div>
       {state.map((product) => {
         return (
-          <ProductCard  product={product} cartFunc/>
+          <CartCard  product={product} cartFunc/>
         )
       })}
     </div>

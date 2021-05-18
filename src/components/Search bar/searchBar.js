@@ -13,7 +13,7 @@ export const SearchBar = () => {
         value={status}
       />
       <button
-      style={{height: "3rem", marginTop: "1.2rem", padding: "1rem", fontSize: "1.3rem"}}
+      className="btn btn-link1"
       onClick={() => setStatus("")}
       >X</button>
     </>
