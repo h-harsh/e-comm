@@ -16,7 +16,7 @@ export const NavBar = () => {
         <Link class="nav-itm nav-itm-text" to="/">
           Home{" "}
         </Link>
-        <Link class="nav-itm nav-itm-text" to="/">
+        <Link class="nav-itm nav-itm-text" to="/products">
           Products{" "}
         </Link>
       </div>

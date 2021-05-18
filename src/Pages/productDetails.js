@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useFilter } from '../components/Filters/filterContext'
 import { CartButton } from '../components/Buttons/cart-button'
 import { WishButton } from '../components/Buttons/wish-button'
+import {Footer} from '../components/Footer/footer'
 
 
 export const ProductDetails = () => {
@@ -14,6 +15,7 @@ export const ProductDetails = () => {
     const product = getProductDetails(searchedFilteredData, productId);
 
     return (
+        <>
         <div style={{ margin: " 10% 25%" }}>
             <div className="card-horiz">
                 <span className="prod-badge">{product.offer}</span>
@@ -35,5 +37,7 @@ export const ProductDetails = () => {
                 </div>
             </div>
         </div>
+        <Footer />
+        </>
     )
 }

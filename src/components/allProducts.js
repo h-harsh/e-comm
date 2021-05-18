@@ -1,5 +1,5 @@
 import {useFilter} from './Filters/filterContext'
-import {ProductCard} from './producrCard'
+import {ProductCard} from './Cards/producrCard'
 
 export const ProductsDisplay = () => {
   const { searchedFilteredData } = useFilter();

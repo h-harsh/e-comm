@@ -1,4 +1,4 @@
-import { CartButton, WishButton, ViewItem } from "./Buttons/index";
+import { CartButton, WishButton, ViewItem } from "../Buttons/index";
 
 export const ProductCard = ({
   product,

@@ -1,5 +1,5 @@
-import { useCart } from "./Cart/cartContext";
-import {WishButton,WishButton2 } from './Buttons/wish-button'
+import { useCart } from "../Cart/cartContext";
+import {WishButton,WishButton2 } from '../Buttons/wish-button'
 import axios from "axios";
 import { useState } from "react";
 

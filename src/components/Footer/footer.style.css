@@ -1,0 +1,18 @@
+footer{
+    height: 7rem;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    margin: 1rem;
+    padding: 1rem;
+}
+p{
+    padding-bottom: 0.5rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

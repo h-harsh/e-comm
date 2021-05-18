@@ -1,4 +1,4 @@
-import {ProductCard} from '../producrCard'
+import {ProductCard} from '../Cards/producrCard'
 import {useWish} from './wishContext';
 
 export const WishDisplay = () => {

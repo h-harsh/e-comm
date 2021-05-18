@@ -1,7 +1,7 @@
 
-import {ProductCard} from '../producrCard'
+import {ProductCard} from '../Cards/producrCard'
 import {useCart} from './cartContext'
-import {CartCard} from '../cartProductCard'
+import {CartCard} from '../Cards/cartProductCard'
 
 export const CartDisplay = () => {
   const { state} = useCart();
