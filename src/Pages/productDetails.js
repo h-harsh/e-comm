@@ -3,6 +3,8 @@ import { ProductDetailsCard } from "../components/Cards/productDetailsCard";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import '../../src/components/Footer/footer.style.css'
+import '../App.css'
 
 export const ProductDetails = () => {
   const { productId } = useParams();
@@ -25,15 +27,17 @@ export const ProductDetails = () => {
   const productFind = getProductDetails(product, productId);
 
   return (
-    <>
+    <div>
       {loader ? (
         <ProductDetailsCard product={productFind} />
       ) : (
-        <h1>Load hora hai</h1>
+        <div className="loader-prod" >
+          Loading....
+        </div>
       )}
       {/* {loader ?   <ProductDetailsCard product={product} /> : <h1>Load hora hai</h1>} */}
       <Footer />
-    </>
+    </div>
   );
 };
 

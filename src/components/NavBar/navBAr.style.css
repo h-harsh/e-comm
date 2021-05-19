@@ -1,0 +1,42 @@
+nav {
+  position: sticky;
+  position: fixed;
+  top: 0;
+  transition: background 0.5s;
+  z-index: 10;
+  background-color: white;
+}
+
+nav.scrolled {
+  background: whitesmoke;
+}
+.nav-icons{
+    font-size: x-large;
+}
+
+  /* icon count */
+  .icon-bdg-cont{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .icon-bdg{
+    position: absolute;
+    right: 3px;
+    top: 10px;
+    border: 0.5px solid;
+    margin: 0;
+    padding: 0.2rem;
+    border-radius: 50%;
+    background-color: #d8d0d0;
+    /* color: white; */
+    font-weight: 600;
+  }
+  .nav-itm{
+      font-size: xx-large;
+      font-variant: all-petite-caps;
+  }
+  .nav-itm-text:hover{
+    border-bottom: 0 solid grey;
+}
+

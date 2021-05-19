@@ -6,7 +6,6 @@ export const SearchBar = () => {
   return (
     <>
       <input
-        // style={{height: "2rem", marginTop: "1.2rem", width: "20rem"}}
         className="search-thing"
         type="text"
         placeholder="Search items..."
