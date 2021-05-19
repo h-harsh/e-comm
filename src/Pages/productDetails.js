@@ -1,43 +1,48 @@
-import { useParams } from 'react-router-dom';
-import { useFilter } from '../components/Filters/filterContext'
-import { CartButton } from '../components/Buttons/cart-button'
-import { WishButton } from '../components/Buttons/wish-button'
-import {Footer} from '../components/Footer/footer'
-
+import { Footer } from "../components/Footer/footer";
+import { ProductDetailsCard } from "../components/Cards/productDetailsCard";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const ProductDetails = () => {
-    const { productId } = useParams();
-    const { searchedFilteredData } = useFilter()
+  const { productId } = useParams();
+  const [product, setProduct] = useState([]);
+  const [loader, setLoader] = useState(false);
 
-    function getProductDetails(product, productId) {
-        return product.find((prod) => prod._id === productId);
-    }
-    const product = getProductDetails(searchedFilteredData, productId);
+  useEffect(() => {
+    (async function () {
+      const response = await axios.get(
+        "https://e-commerce-backend.harshporwal1.repl.co/products"
+      );
+      setProduct(response.data.products);
+      setLoader(true);
+    })();
+  }, []);
 
-    return (
-        <>
-        <div style={{ margin: " 10% 25%" }}>
-            <div className="card-horiz">
-                <span className="prod-badge">{product.offer}</span>
-                <img className="prod-img-horiz" src={product.image} alt="" />
-                <div className="card-sub-div-horiz">
-                    <h3>{product.name}</h3>
-                    <div className="price">
-                        <p>{product.price}</p>
-                        <p className="price-orig">₹ 1599</p>
-                        <p>(45% off)</p>
-                    </div>
-                    <p>{product.material}</p>
+  function getProductDetails(products, productId) {
+    return products.find((prod) => prod._id === productId);
+  }
+  const productFind = getProductDetails(product, productId);
 
-                    <p>{product.ratings}</p>
-                    <div className="prod-btns">
-                        <CartButton product={product} />
-                        <WishButton product={product} />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <Footer />
-        </>
-    )
-}
+  return (
+    <>
+      {loader ? (
+        <ProductDetailsCard product={productFind} />
+      ) : (
+        <h1>Load hora hai</h1>
+      )}
+      {/* {loader ?   <ProductDetailsCard product={product} /> : <h1>Load hora hai</h1>} */}
+      <Footer />
+    </>
+  );
+};
+
+// axios
+//       .get("https://e-commerce-backend.harshporwal1.repl.co/products")
+//       .then((response) => setData(response.data.products))
+//       .then(setLoader(false))
+
+// function getProductDetails(products, productId) {
+//   return products.find((prod) => prod._id === productId);
+// }
+// setProduct(getProductDetails(products, productId));

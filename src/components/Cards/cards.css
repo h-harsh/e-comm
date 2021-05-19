@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,500&display=swap');
+.out-box{
+    display: flex;
+    justify-content: center;
+}
+
+.product-details{
+    display: flex;
+    justify-content: space-around;
+}
+.container img {
+    width: 30rem;
+    height: 35rem;
+}
+.c-details{
+    height: 52rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.title-name{
+    font-size: 3rem;
+    font-family: ui-monospace;
+}
+p span{
+    font: message-box;
+}
+
+.prices{
+    font-size: 1.5rem;
+}
+.price .dis-price{
+    font-weight: bold;
+}
+.price .disc{
+    color: #af370b;
+}
+
+.extra-details{
+    font-size: 0.9rem;
+}

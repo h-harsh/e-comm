@@ -6,16 +6,17 @@ export const SearchBar = () => {
   return (
     <>
       <input
-        style={{height: "2rem", marginTop: "1.2rem", width: "20rem"}}
+        // style={{height: "2rem", marginTop: "1.2rem", width: "20rem"}}
+        className="search-thing"
         type="text"
         placeholder="Search items..."
         onChange={ (event) => setStatus(event.target.value)}
         value={status}
       />
-      <button
+      {/* <button
       className="btn btn-link1"
       onClick={() => setStatus("")}
-      >X</button>
+      >X</button> */}
     </>
   );
 };

@@ -19,9 +19,9 @@ export const ProductCard = ({
             alt=""
           />
         </div>
-        <p className="brand-name">Brand nam</p>
+        <p className="brand-name">{product.brand}</p>
         <h3 className="product-name">{product.name}</h3>
-        <div className="price">
+        <div style={{textAlign:"left"}} className="price">
           <p>₹{product.price}</p>
           <p className="price-orig">₹ 1599</p>
           <p>(45% off)</p>

@@ -27,7 +27,7 @@ export const WishButton = ({ product }) => {
   );
 };
 
-export const WishButton2 = ({ product }) => {
+export const WishButton2 = ({ product, lg}) => {
   const { addToWishList, removeFromWishList, wishState } = useWish();
   const [idArray, setIdArray] = useState([])
 
@@ -39,17 +39,17 @@ export const WishButton2 = ({ product }) => {
 
 
   return (<>
+
     { idArray.includes(product._id || product.id) ?
-      <button className="nm-btn2 horiz" onClick={() => removeFromWishList(product)} >
+      <button className={lg ? "nm-btn2": "nm-btn2 horiz" } onClick={() => removeFromWishList(product)} >
         <i class="fas fa-heart"></i>
       </button>
       :
-      <button className="nm-btn2 horiz" onClick={() => addToWishList(product)}> 
+      <button className={lg ? "nm-btn2": "nm-btn2 horiz" } onClick={() => addToWishList(product)}> 
      <i class="far fa-heart"></i> 
     </button> 
-     
-
     }
+
   </>
   );
 };
