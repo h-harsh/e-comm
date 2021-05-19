@@ -1,0 +1,34 @@
+/* cart card checkout */
+
+.checkout-box {
+  border: 0.5px solid gray;
+  width: 18rem;
+  padding: 0.6rem;
+  color: gray;
+  display: inline;
+  height: fit-content;
+  margin: 3rem;
+}
+.sub-fields {
+  display: flex;
+  justify-content: space-between;
+}
+.final-details {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+.total-amount {
+  color: black;
+  font-weight: bold;
+}
+.battan {
+  justify-content: center;
+}
+
+/* cart card edit */
+.horiz-card {
+  margin: 1rem;
+}
+.horiz-prod-price2 {
+  flex-direction: column;
+}

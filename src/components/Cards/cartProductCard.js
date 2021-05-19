@@ -56,32 +56,33 @@ export const CartCard = ({ product }) => {
             <img class="horiz-prod-img" src={product.image} alt="" />
           </div>
           <div class="horiz-prod-sub-in">
-            <p class="brand-name">Brand nam</p>
+            <p class="brand-name">{product.brand}</p>
             <h3 class="product-name">{product.name}</h3>
             <p class="prod-desc">Hello ye bhi altu faltu product hai</p>
             <div class="horiz-prod-btns">
-              <button
-                class="btn btn-link1 horiz-"
-                onClick={() => increaseQuantity(product)}
-              >
-                {add ? "O" : "+"}
-              </button>
-              <p class="horiz-prod-qty">{product.qty}</p>
+              
               <button
                 class="btn btn-link1 horiz-"
                 onClick={() => decreaseQuantity(product)}
               >
                 {less ? "O" : "-"}
               </button>
+              <p class="horiz-prod-qty">{product.qty}</p>
+              <button
+                class="btn btn-link1 horiz-"
+                onClick={() => increaseQuantity(product)}
+              >
+                {add ? "O" : "+"}
+              </button>
             </div>
           </div>
         </div>
         <div class="horiz-prod-price">
-          <div class="horiz-prod-price1">{product.price}</div>
-          <div class="horiz-prod-price2">
+          <div class="horiz-prod-price1">₹{product.price}</div>
+          {/* <div class="horiz-prod-price2">
+          <p>(45% off)</p>
             <p class="price-orig">₹ 1599</p>
-            <p>(45% off)</p>
-          </div>
+          </div> */}
         </div>
       </div>
       <div class="buttons-horizontal">
