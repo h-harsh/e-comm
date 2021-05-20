@@ -40,3 +40,7 @@ p span{
 .extra-details{
     font-size: 0.9rem;
 }
+
+.card{
+    text-align: left;
+}

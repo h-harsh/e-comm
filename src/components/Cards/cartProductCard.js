@@ -78,7 +78,7 @@ export const CartCard = ({ product }) => {
           </div>
         </div>
         <div class="horiz-prod-price">
-          <div class="horiz-prod-price1">₹{product.price}</div>
+          <div class="horiz-prod-price1">₹ {Math.round(product.price - (product.price * (product.discount/100))) * product.qty }</div>
           {/* <div class="horiz-prod-price2">
           <p>(45% off)</p>
             <p class="price-orig">₹ 1599</p>

@@ -1,11 +1,7 @@
 import { CartButton, WishButton, ViewItem } from "../Buttons/index";
 
 export const ProductCard = ({
-  product,
-  viewBtn,
-  wishBtn,
-  cartBtn,
-  cartFunc,
+  product
 }) => {
   
   return (
@@ -22,9 +18,9 @@ export const ProductCard = ({
         <p className="brand-name">{product.brand}</p>
         <h3 className="product-name">{product.name}</h3>
         <div style={{textAlign:"left"}} className="price">
-          <p>₹{product.price}</p>
-          <p className="price-orig">₹ 1599</p>
-          <p>(45% off)</p>
+          <p>₹ {Math.round(product.price - (product.price * (product.discount/100)))} </p>
+          <p className="price-orig">₹{product.price}</p>
+          <p>({product.discount}% off)</p>
         </div>
 
         <div className="oth-btn-container">
@@ -34,8 +30,8 @@ export const ProductCard = ({
           <button className="icon-btn">
             <i className="fas fa-binoculars"></i>
           </button> */}
-          {viewBtn && <ViewItem product={product} />}
-          {wishBtn && <WishButton product={product} />}
+          <ViewItem product={product} />
+           <WishButton product={product} />
         </div>
       </div>
 
@@ -44,7 +40,7 @@ export const ProductCard = ({
           {/* <button className="sp-button">
             <span> Add To Cart</span>
           </button> */}
-          {cartBtn && <CartButton product={product} />}
+           <CartButton product={product} />
         </div>
       </div>
     </div>

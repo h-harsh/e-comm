@@ -17,7 +17,7 @@ export const ProductsDisplay = () => {
     :
       (searchedFilteredData.map((product) => {
         return (
-          <ProductCard product={product} viewBtn wishBtn cartBtn />
+          <ProductCard product={product}  />
         );
       })) 
       
