@@ -12,12 +12,25 @@ footer {
   margin: 1rem;
   padding: 1rem;
 }
-p {
+footer p {
   padding-bottom: 0.5rem;
 }
-a {
+footer a {
   text-decoration: none;
   color: white;
 }
 
+
+@media screen and (max-width: 400px) {
+  footer{
+    flex-direction: column;
+    height:unset;
+    justify-content: center;
+  }
+  .container {
+    margin: 0.2rem;
+    padding: 0.1rem;
+    margin-left: 1.5rem;
+  }
+}
 

@@ -36,13 +36,7 @@ export const CartDisplay = () => {
   });
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        position: "relative",
-      }}
-    >
+    <div className="cart-page-outer">
       <div>
         {state.map((product) => {
           return <CartCard product={product} cartFunc />;

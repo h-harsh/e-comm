@@ -8,47 +8,57 @@ import { useState } from "react";
 export const NavBar = () => {
   const { state } = useCart();
   const { wishState } = useWish();
-  const [height, setHeight] = useState('')
+  const [height, setHeight] = useState("");
 
   window.onscroll = function () {
     if (window.pageYOffset > 200) {
-      setHeight('scrolled')
+      setHeight("scrolled");
     } else {
-      setHeight('')
+      setHeight("");
     }
   };
 
+  function myFunction() {
+    let x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+
   return (
-    <nav className={height}  >
-      <div class="nav-sub-sec nleft">
-        <p class="nav-itm nav-icons">
-          <i class="fab fa-drupal"></i>
-        </p>
-        <Link class="nav-itm nav-itm-text" to="/">
-          Home{" "}
-        </Link>
-        <Link class="nav-itm nav-itm-text" to="/products">
-          Products{" "}
-        </Link>
-      </div>
-      <div class="nav-sub-sec">
+    <nav className={height} className="topnav" id="myTopnav">
+      <Link to="/">
+        <p className="nav-itm nav-itm-text active ">Home</p>
+      </Link>
+      <Link to="/products">
+      <p className="nav-itm nav-itm-text ">Products</p>
+      </Link>
+
+      <div className="search-bx">
+        {/* <input className="search-thing" type="text" placeholder="search....." /> */}
         <SearchBar class="search-thing" />
-        {/* <button class="btn btn-link1">X</button> */}
       </div>
-      <div class="nav-sub-sec nright">
-        <div className="icon-bdg-cont" >
-        <Link to="/cart" class="nav-itm">
-          <i class="fas fa-shopping-cart"></i>
-        </Link>
-        <p className="icon-bdg" >{state.length}</p>
-        </div>
-        <div className="icon-bdg-cont" >
-        <Link to="/wishlist" class="nav-itm">
-          <i class="fas fa-heart"></i>
-        </Link>
-        <p className="icon-bdg" >{wishState.length}</p>
-        </div>
-      </div>
+
+      <Link className="icon-box" to="/wishlist">
+      <p className="nav-itm right ">
+        <span>WishList</span> <i className="fas fa-heart"></i>
+      </p>
+      </Link>
+      <p className="icon-bdg" >{wishState.length}</p>
+
+      <Link className="icon-box" to="/cart">
+      <p className="nav-itm right ">
+        <span >Cart</span> <i className="fas  fa-shopping-cart"></i>
+      </p>
+      </Link>
+      <p className="icon-bdg icon-bdg2" >{state.length}</p>
+
+      <p className="nav-itm control right" onClick={myFunction}>
+
+        <i className="fa fa-bars"></i>
+      </p>
     </nav>
   );
 };

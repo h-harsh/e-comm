@@ -3,7 +3,7 @@ import "./category.style.css";
 export const CategoryDisplay = () => {
   return (
     <div className="out-most" >
-        <h1 className="cat-heading" >Browse All Categories</h1>
+       <h1 className="cat-heading" >Browse All Categories</h1>
       <div className="category-container">
       <div className="card-category">
         <img

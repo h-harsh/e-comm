@@ -32,4 +32,31 @@
     background: border-box;
     font-weight: bold;
   }
+
+  @media screen and (max-width: 460px) {
+    .banner-title{
+      font-size: 3rem;
+    }
+    .banner-tagline{
+      font-size: 1.3rem;
+    }
+    h2 .nm-btn2{
+      width: fit-content;
+    }
+  }
   
+  @media screen and (max-width: 375px) {
+    .banner-title{
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+    h2 .nm-btn2{
+      width: fit-content;
+    }
+    .banner-tagline{
+      font-size: 1rem;
+    }
+    .banner-btn{
+      font-size: small;
+    }
+  }

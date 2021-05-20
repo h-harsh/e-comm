@@ -3,7 +3,7 @@ import {useFilter} from './filterContext'
 export const FilterDisplay = () => {
   const { dispatch } = useFilter()
   return (
-    <div>
+    <>
       <fieldset>
         <legend>Sort by Price</legend>
         <label>
@@ -42,6 +42,6 @@ export const FilterDisplay = () => {
           In Stock only
         </label>
       </fieldset>
-    </div>
+    </>
   );
 };
