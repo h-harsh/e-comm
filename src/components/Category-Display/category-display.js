@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./category.style.css";
 
 export const CategoryDisplay = () => {
@@ -13,7 +14,7 @@ export const CategoryDisplay = () => {
         />
         <h2>The category Name</h2>
         <p>A line very short abot category only</p>
-        <button className="nm-btn2">Browse More</button>
+        <Link to="/products" > <button className="nm-btn2">Browse More</button></Link>
       </div>
       <div className="card-category">
         <img
@@ -23,7 +24,7 @@ export const CategoryDisplay = () => {
         />
         <h2>The category Name</h2>
         <p>A line very short abot category only</p>
-        <button className="nm-btn2">Browse More</button>
+        <Link to="/products" > <button className="nm-btn2">Browse More</button></Link>
       </div>
       <div className="card-category">
         <img
@@ -33,7 +34,7 @@ export const CategoryDisplay = () => {
         />
         <h2>The category Name</h2>
         <p>A line very short abot category only</p>
-        <button className="nm-btn2">Browse More</button>
+        <Link to="/products" > <button className="nm-btn2">Browse More</button></Link>
       </div>
       <div className="card-category">
         <img
@@ -43,7 +44,7 @@ export const CategoryDisplay = () => {
         />
         <h2>The category Name</h2>
         <p>A line very short abot category only</p>
-        <button className="nm-btn2">Browse More</button>
+        <Link to="/products" > <button className="nm-btn2">Browse More</button></Link>
       </div>
       <div className="card-category">
         <img
@@ -53,7 +54,7 @@ export const CategoryDisplay = () => {
         />
         <h2>The category Name</h2>
         <p>A line very short abot category only</p>
-        <button className="nm-btn2">Browse More</button>
+        <Link to="/products" ><button className="nm-btn2">Browse More</button></Link>
       </div>
 
       </div>

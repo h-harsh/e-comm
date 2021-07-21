@@ -1,13 +1,10 @@
 import {useFilter} from './Filters/filterContext'
 import {ProductCard} from './Cards/producrCard'
-import { useState } from 'react';
 import '../App.css'
 
 export const ProductsDisplay = () => {
   const { searchedFilteredData } = useFilter();
-  const[status, setStatus] = useState(false);
-  console.log(searchedFilteredData)
-
+  
   return (
     <div style={{textAlign: "center"}} >
       { searchedFilteredData.length === 0 ? 

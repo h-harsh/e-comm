@@ -7,6 +7,7 @@ import {
 } from "react";
 import { filterFunc } from "./filterReducer";
 import axios from "axios";
+import { baseurl } from "../../utils/apiCalls";
 
 export const FilterContext = createContext();
 
@@ -23,10 +24,11 @@ export const FilterProvider = ({ children }) => {
   );
 
   useEffect(() => {
-    axios
-      .get("https://e-commerce-backend.harshporwal1.repl.co/products")
-      .then((response) => setProducts(response.data.products));
-  }, []);
+    (async function(){
+      const response = await axios.get(`${baseurl}/products`)
+    setProducts(response.data.products)
+    })()
+  }, [])
 
   const sortingData = (productsList, sortBy) => {
     if (sortBy === "HIGH-TO-LOW") {
@@ -59,6 +61,17 @@ export const FilterProvider = ({ children }) => {
       return null;
     });
   };
+  // const searchedFilteredDataFunc = (filteredDatas) => {
+  //   const res =  filteredDatas.filter((value) => {
+  //     if (value.name.toLowerCase().includes(status.toLocaleLowerCase())) {
+  //       return value;
+  //     }
+  //     return null;
+  //   })
+  //   if(res.length > 0){
+  //     return null
+  //   } else return res
+  // };
 const searchedFilteredData = searchedFilteredDataFunc(filteredData)
 
   return (

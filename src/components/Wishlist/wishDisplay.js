@@ -7,7 +7,7 @@ export const WishDisplay = () => {
   console.log(  wishState)
   return (
     <div style={{textAlign: "center"}}>
-      { wishState.length < 1 ? <Loader text={"Jaa yhase"} />
+      { wishState?.length < 1 ? <Loader text={"Start Wishlisting"} />
       :
       wishState.map((product) => {
           return (
@@ -19,27 +19,3 @@ export const WishDisplay = () => {
   );
 };
 
-
-
-
-
-
-
-
-
-// export const WishDisplay = () => {
-//   const { wishState } = useWish()
-//   console.log(wishState)
-//   return (
-//     <div style={{textAlign: "center"}}>
-//       {wishState.map((product) => {
-//         if (product) {
-//           return (
-//               <ProductCard product={product} cartBtn wishBtn  />
-//           )
-//         }
-//         return null
-//       })}
-//     </div>
-//   );
-// };

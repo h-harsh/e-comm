@@ -1,14 +1,16 @@
+import { useState } from "react";
 import { WishButton2, CartButton } from "../Buttons/index";
 import "./cards.css";
 
 export const ProductDetailsCard = ({ product }) => {
+  const [arrow, setArrow] = useState("fas fa-chevron-down")
   return (
     <div className="out-box">
       <div className="product-details">
         <div className="container c-img">
           <img src={product.image} />
         </div>
-        <div className="container c-details">
+        <div className={arrow === "fas fa-chevron-down" ? "container c-details big": "container c-details small" }>
           <div className="title">
             <h3 className="title-brand">{product.brand}</h3>
             <h1 className="title-name">{product.name}</h1>
@@ -53,7 +55,9 @@ export const ProductDetailsCard = ({ product }) => {
             <CartButton product={product} />
             <WishButton2 product={product} lg />
           </div>
-          <div className="extra-details">
+          <h3 onClick={ () => setArrow(arrow === "fas fa-chevron-up" ? "fas fa-chevron-down" : "fas fa-chevron-up")}
+          >More details <i class={arrow}></i> </h3>
+          <div className={arrow === "fas fa-chevron-up" ? "extra-details-hide" : "extra-details"}>
             <h3>PRODUCT DETAILS</h3>
             <p>Premium non-stretch denim. </p>
             <p>Clean black wash.</p>
@@ -70,6 +74,7 @@ export const ProductDetailsCard = ({ product }) => {
             <p>100% cotton</p>
             <p>Machine-wash</p>
           </div>
+
         </div>
       </div>
     </div>

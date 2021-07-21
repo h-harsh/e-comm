@@ -38,7 +38,7 @@ export const CartDisplay = () => {
   return (
     <div className="cart-page-outer">
       <div>
-        {state.map((product) => {
+        {state?.map((product) => {
           return <CartCard product={product} cartFunc />;
         })}
       </div>

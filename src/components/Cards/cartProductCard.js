@@ -1,11 +1,12 @@
 import { useCart } from "../Cart/cartContext";
-import {WishButton,WishButton2 } from '../Buttons/wish-button'
+import {WishButton2 } from '../Buttons/wish-button'
 import axios from "axios";
 import { useState } from "react";
+import { baseurl } from "../../utils/apiCalls";
 
 export const CartCard = ({ product }) => {
   const { dispatch } = useCart();
-  const baseUrl = "https://e-commerce-backend.harshporwal1.repl.co/cart";
+  
   const [remove, setRemove] = useState(false);
   const [add, setAdd] = useState(false);
   const [less, setLess] = useState(false);
@@ -13,9 +14,8 @@ export const CartCard = ({ product }) => {
   //   Cart Functions
   const increaseQuantity = async (product) => {
     setAdd(true);
-    const response = await axios.post(`${baseUrl}/${product._id}`, {
-      qty: product.qty + 1,
-    });
+    const response = await axios.post(`${baseurl}/cart/${product._id}/inc`, {});
+    console.log(response)
     if (response.status === 200) {
       dispatch({ type: "INCREASE_QTY", payload: product });
       setAdd(false);
@@ -26,9 +26,7 @@ export const CartCard = ({ product }) => {
   const decreaseQuantity = async (product) => {
     if (product.qty > 1) {
       setLess(true);
-      const response = await axios.post(`${baseUrl}/${product._id}`, {
-        qty: product.qty - 1,
-      });
+      const response = await axios.post(`${baseurl}/cart/${product._id}/dec`, { });
       if (response.status === 200) {
         dispatch({ type: "DECREASE_QTY", payload: product });
       }
@@ -40,7 +38,7 @@ export const CartCard = ({ product }) => {
 
   const removeFromCart = async (product) => {
     setRemove(true);
-    const response = await axios.delete(`${baseUrl}/${product._id}`);
+    const response = await axios.delete(`${baseurl}/cart/${product._id}`);
     if (response.status === 200) {
       dispatch({ type: "REMOVE_FROM_CART", payload: product });
       setRemove(false);

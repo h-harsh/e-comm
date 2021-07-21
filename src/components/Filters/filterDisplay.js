@@ -1,4 +1,5 @@
 import {useFilter} from './filterContext'
+import './filter.css'
 
 export const FilterDisplay = () => {
   const { dispatch } = useFilter()

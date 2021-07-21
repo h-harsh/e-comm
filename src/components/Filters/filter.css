@@ -1,0 +1,10 @@
+fieldset{
+    margin: 0.5rem;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+}
+fieldset:hover{
+    box-shadow: 3px 3px 3px rgb(168, 164, 164);
+    transition: 0.5s;
+}
