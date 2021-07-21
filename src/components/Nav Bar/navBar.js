@@ -4,11 +4,15 @@ import { useAuth } from "../../Auth/authContetxt";
 import { SideBar } from '../SideBar/sideBar'
 import { SearchBar } from "../Search bar/searchBar";
 import './navBar.css'
+import { useWish } from "../Wishlist/wishContext";
+import { useCart } from "../Cart/cartContext";
 
 export const NavBar = () => {
   const { token,  logoutHandler } = useAuth();
   const [sideBarShow, setSideBarShow] = useState(false);
   const showSideBar = () => setSideBarShow(!sideBarShow);
+  const {state} = useCart();
+  const {wishState} = useWish()
   
 
   return (
@@ -51,12 +55,12 @@ export const NavBar = () => {
           ) : null}
           {token ? (
             <li className="nav-itm nav-itm-text right resp-txt icn-bx">
-              <Link to="/cart"><i class="fas fa-shopping-cart"></i><p className="icon-badge">5</p></Link>
+              <Link to="/cart"><i class="fas fa-shopping-cart"></i><p className="icon-badge">{state.length}</p></Link>
             </li>
           ): null}
           {token ? (
             <li className="nav-itm nav-itm-text right resp-txt icn-bx">
-              <Link to="/wishlist"><i class="fas fa-heart"></i><p className="icon-badge">5</p></Link>
+              <Link to="/wishlist"><i class="fas fa-heart"></i><p className="icon-badge">{wishState.length}</p></Link>
               
             </li>
           ): null}
