@@ -31,6 +31,7 @@ export const AuthProvider = ({children}) => {
       setupAuthHeaderForServiceCalls(token)
 
     const loginHandler  = async (userName, password) => {
+        console.log(userName, password)
         try{
             const response = await axios.post(`${baseurl}/user/login`,
          {userName, password},

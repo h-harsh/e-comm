@@ -29,7 +29,15 @@ export const LoginBox = () => {
       >
         Login
       </button>
+      <button
+        className="login-item nm-btn2 an"
+        onClick={() => loginHandler('h-harsh', 'harsh')}
+      >
+        Login as Guest
+      </button>
       <h2 className="login-item ">{loginState}</h2>
+
+      
     </div>
   );
 };
