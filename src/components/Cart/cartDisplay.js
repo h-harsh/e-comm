@@ -67,7 +67,7 @@ export const CartDisplay = () => {
             <p>₹ {mrp - dizcount + delCh}</p>
           </div>
           <div className="sub-fields battan">
-            <button className="nm-btn2">Checkout</button>
+            <button style={{cursor:'not-allowed'}} className="nm-btn2"  >Checkout</button>
           </div>
         </div>
       )}

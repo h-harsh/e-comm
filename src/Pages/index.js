@@ -5,5 +5,6 @@ import {ProductDetails} from './productDetails'
 import {Home} from './Home'
 import {Login} from './Login'
 import {Signup} from './Signup'
+import {Address} from './Address'
 
-export {ProductDetails, Cart, WishList, Products, Home, Login, Signup} ;
+export {ProductDetails, Cart, WishList, Products, Home, Login, Signup, Address} ;

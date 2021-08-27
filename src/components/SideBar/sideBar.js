@@ -22,6 +22,9 @@ export const SideBar = ({ status, showSideBar }) => {
         <li onClick={showSideBar}>
           <Link to="/wishlist"><i class="fas fa-heart"></i> Wishlist</Link>
         </li>
+        <li onClick={showSideBar}>
+          <Link to="/address"><i class="fas fa-map-marker-alt"></i> Address</Link>
+        </li>
       </ul>
     </nav>
   );

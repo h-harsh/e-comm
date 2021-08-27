@@ -3,7 +3,7 @@ import { React } from 'react'
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import { PrivateRoute } from './utils/privateRoute';
-import {ProductDetails, Cart, WishList, Products, Home, Login, Signup} from './Pages/index'
+import {ProductDetails, Cart, WishList, Products, Home, Login, Signup, Address} from './Pages/index'
 import {NavBar} from './components/Nav Bar/navBar'
 
 export default function App() {
@@ -18,6 +18,7 @@ export default function App() {
         <Route path="signup" element={<Signup />} />
         <PrivateRoute path="cart" element={<Cart />} />
         <PrivateRoute path="wishlist" element={<WishList />} />
+        <PrivateRoute path="address" element={<Address />} />
         <Route path="products/:productId" element={<ProductDetails />} />
       </Routes>
       </main>
