@@ -52,7 +52,7 @@ export const CartButton = ({ product }) => {
         {product.inStock ? null : <p>Out of stock</p>}
         </div>
       )}
-      {/* {toastStatus ? ( <div onClick={() => setToastStatus(false)}> <InToast value={true} text={"You need to login"} /> </div> ) : null} */}
+      {toastStatus ? ( <div onClick={() => setToastStatus(false)}> <InToast value={true} text={"You need to login"} /> </div> ) : null}
     </>
   );
 };
