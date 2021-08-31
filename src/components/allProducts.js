@@ -3,13 +3,21 @@ import {ProductCard} from './Cards/producrCard'
 import '../App.css'
 
 export const ProductsDisplay = () => {
-  const { searchedFilteredData } = useFilter();
-  
+  const { searchedFilteredData, products } = useFilter();
+  console.log(searchedFilteredData)
   return (
     <div style={{textAlign: "center"}} >
-      { searchedFilteredData.length === 0 ? 
+      
+      {searchedFilteredData.length === 0 && products.length > 1 ? 
+        <div className="loader-prod" >
+        No match found
+      </div>
+      : null
+      }
+
+      { products.length === 0  ? 
       <div className="loader-prod" >
-      Loading....
+      Loading...
     </div>
     :
       (searchedFilteredData.map((product) => {

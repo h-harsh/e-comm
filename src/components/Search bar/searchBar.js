@@ -1,17 +1,20 @@
-import {useFilter} from '../Filters/filterContext'
+import { useFilter } from "../Filters/filterContext";
+import { baseurl } from "../../utils/apiCalls";
 
 export const SearchBar = () => {
-    const {setStatus, status} = useFilter();
+  const { setStatus, status } = useFilter();
 
   return (
     <>
-      <input
-        className="search-thing"
-        type="text"
-        placeholder="Search items..."
-        onChange={ (event) => setStatus(event.target.value)}
-        value={status}
-      />
+      { window.location.href === "https://finstore.netlify.app/products" ? (
+        <input
+          className="search-thing"
+          type="text"
+          placeholder="Search items..."
+          onChange={(event) => setStatus(event.target.value)}
+          value={status}
+        />
+      ) : null}
       {/* <button
       className="btn btn-link1"
       onClick={() => setStatus("")}
@@ -19,15 +22,3 @@ export const SearchBar = () => {
     </>
   );
 };
-
-// products.filter(value => {
-//     if (value.name.toLowerCase().includes(status.toLowerCase())) {
-//        return value;
-//    } else return false
-// }).map(val => {
-//    return(
-//        <div>
-//        <p>{val.name}</p>
-//    </div>
-//    )
-// })

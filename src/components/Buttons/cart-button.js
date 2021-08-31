@@ -5,6 +5,7 @@ import axios from "axios";
 import { baseurl } from "../../utils/apiCalls";
 import { useAuth } from "../../Auth/authContetxt";
 import { InToast } from "../Toast/toast";
+import './buttons.css'
 
 export const CartButton = ({ product }) => {
   const { state, dispatch } = useCart();
@@ -39,6 +40,7 @@ export const CartButton = ({ product }) => {
           <button className="nm-btn2">Go To Cart</button>
         </Link>
       ) : (
+        <div className="cart-btn-box">
         <button
           className={product.inStock ? "sp-button" : "nm-btn2 btn2-disabled"}
           disabled={product.inStock ? false : true}
@@ -47,8 +49,10 @@ export const CartButton = ({ product }) => {
         >
           <span>{loading ? "Adding" : "Add to cart"}</span>
         </button>
+        {product.inStock ? null : <p>Out of stock</p>}
+        </div>
       )}
-      {toastStatus ? ( <div onClick={() => setToastStatus(false)}> <InToast value={true} text={"You need to login"} /> </div> ) : null}
+      {/* {toastStatus ? ( <div onClick={() => setToastStatus(false)}> <InToast value={true} text={"You need to login"} /> </div> ) : null} */}
     </>
   );
 };

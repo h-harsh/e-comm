@@ -1,0 +1,23 @@
+.btn2-disabled {
+  color: gray !important;
+}
+.cart-btn-box {
+  position: relative;
+  display: inline-block;
+}
+.cart-btn-box p {
+  visibility: hidden;
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  top: -1rem;
+  left: 33%;
+  z-index: 1;
+}
+
+.cart-btn-box:hover p {
+  visibility: visible;
+  transition: 0.5s;
+}
