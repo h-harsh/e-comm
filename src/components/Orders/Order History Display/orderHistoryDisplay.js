@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useAuth } from "../../../Auth/authContetxt";
 import { OrderCard } from "../../Cards/Order Card/orderCard";
+import Loader from "react-loader-spinner";
 
 export const OrderHistoryDisplay = () => {
   const [orders, setOrders] = useState(null);
@@ -21,7 +22,15 @@ export const OrderHistoryDisplay = () => {
     <div style={{display:'inline-block', marginTop:'1rem'}}> 
       <h2 >View Recent Orders</h2>
       {orders === null ? (
-        <h3>Loading</h3>
+        <div className="loader-prod">
+        <Loader
+          type="ThreeDots"
+          color="black"
+          height={100}
+          width={100}
+          timeout={3000} //3 secs
+        />
+      </div>
       ) : orders.length === 0 ? (
         <h3>No Orders yet</h3>
       ) : (

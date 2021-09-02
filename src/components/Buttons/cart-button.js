@@ -6,6 +6,7 @@ import { baseurl } from "../../utils/apiCalls";
 import { useAuth } from "../../Auth/authContetxt";
 import { InToast } from "../Toast/toast";
 import './buttons.css'
+import { ToastContainer, toast } from 'react-toastify';
 
 export const CartButton = ({ product }) => {
   const { state, dispatch } = useCart();
@@ -28,9 +29,11 @@ export const CartButton = ({ product }) => {
     const response = await axios.post(`${baseurl}/cart/${product._id}`, { });
     if (response.status === 200) {
       dispatch({ type: "ADD_TO_CART", payload: product });
+      toast.success("Added to cart")
       setloading(false);
     }
     setloading(false);
+    
   };
 
   return (
@@ -45,7 +48,7 @@ export const CartButton = ({ product }) => {
           className={product.inStock ? "sp-button" : "nm-btn2 btn2-disabled"}
           disabled={product.inStock ? false : true}
           // onClick={() => addToCart(product)}
-          onClick={token ? () => addToCart(product) : () => setToastStatus(true) }
+          onClick={token ? () => addToCart(product) : () => toast.error("You need to login") }
         >
           <span>{loading ? "Adding" : "Add to cart"}</span>
         </button>

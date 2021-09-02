@@ -1,6 +1,7 @@
 import { baseurl } from "../../../utils/apiCalls";
 import axios from "axios";
-import './addAddressBox.css'
+import './addAddressBox.css';
+import { toast } from "react-toastify";
 
 export const AddAddressBox = ({
   setAddAddress,
@@ -15,10 +16,12 @@ export const AddAddressBox = ({
     try {
       const response = await axios.post(`${baseurl}/address/new`, { data });
       fetchAddress();
-      console.log(response);
+      // console.log(response);
+      toast.success("Address added")
     } catch (error) {
       console.log(error.response.data);
     }
+    
   };
 
   return (

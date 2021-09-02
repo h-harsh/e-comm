@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useAuth } from "../../Auth/authContetxt";
 import { InToast } from "../Toast/toast";
 
+
 export const WishButton = ({ product }) => {
   const { addToWishList, removeFromWishList, wishState } = useWish();
   const [idArray, setIdArray] = useState([])

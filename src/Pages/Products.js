@@ -13,6 +13,7 @@ export const Products = () => {
             <div className="prod-grid-item" >
                 <ProductsDisplay />
             </div>
+            
         </div>
         <Footer />
         </>

@@ -3,9 +3,10 @@ import { ProductDetailsCard } from "../components/Cards/productDetailsCard";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import '../../src/components/Footer/footer.style.css'
-import '../App.css'
+import "../../src/components/Footer/footer.style.css";
+import "../App.css";
 import { baseurl } from "../utils/apiCalls";
+import Loader from "react-loader-spinner";
 
 export const ProductDetails = () => {
   const { productId } = useParams();
@@ -25,8 +26,14 @@ export const ProductDetails = () => {
       {loader ? (
         <ProductDetailsCard product={product} />
       ) : (
-        <div className="loader-prod" >
-          Loading....
+        <div className="loader-prod">
+          <Loader
+            type="ThreeDots"
+            color="black"
+            height={100}
+            width={100}
+            timeout={3000} //3 secs
+          />
         </div>
       )}
       {/* {loader ?   <ProductDetailsCard product={product} /> : <h1>Load hora hai</h1>} */}

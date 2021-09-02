@@ -5,6 +5,7 @@ import axios from "axios";
 import { ViewAddressBox } from "../View Address Box/viewAddressBox";
 import { AddAddressBox } from "../Add Address Box/addAddressBox";
 import { SelectAddressBox } from "../Select Addresss Box/selectAddressBox";
+import Loader from "react-loader-spinner"; 
 
 export const AddressDisplay = ({ select }) => {
   const [addAddress, setAddAddress] = useState(false);
@@ -18,7 +19,7 @@ export const AddressDisplay = ({ select }) => {
     state: "",
   });
 
-  const [allAddresses, setAllAddresses] = useState([]);
+  const [allAddresses, setAllAddresses] = useState(null);
 
   const fetchAddress = async () => {
     const response = await axios.get(`${baseurl}/address`);
@@ -32,7 +33,18 @@ export const AddressDisplay = ({ select }) => {
 
   return (
     <div style={{ marginTop: "2rem" }}>
-      {addAddress ? (
+      { allAddresses === null ? (
+        <div className="loader-prod">
+        <Loader
+          type="ThreeDots"
+          color="black"
+          height={100}
+          width={100}
+          timeout={3000} //3 secs
+        />
+      </div>
+      ) : 
+      addAddress ? (
         <AddAddressBox
           setAddAddress={setAddAddress}
           setData={setData}
@@ -51,7 +63,8 @@ export const AddressDisplay = ({ select }) => {
           allAddresses={allAddresses}
           fetchAddress={fetchAddress}
         />
-      )}
+      )
+      }
     </div>
   );
 };

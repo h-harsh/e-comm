@@ -4,7 +4,7 @@ import axios from "axios";
 import { baseurl } from "../../../utils/apiCalls";
 import { useCart } from "../../Cart/cartContext";
 import { OrderSuccessBox } from "../../Orders/Order Success Box/orderSuccessBox";
-// import {Razorpay} from 'Razorpay'
+import Loader from "react-loader-spinner"; 
 
 export const SelectAddressBox = ({
   setAddAddress,
@@ -142,7 +142,15 @@ export const SelectAddressBox = ({
       ) : payment && paymentVerified ? (
         <OrderSuccessBox/>
       ) : (
-        <h1>payment processing</h1>
+        <div className="loader-prod">
+        <Loader
+        type="ThreeDots"
+        color="black"
+        height={100}
+        width={100}
+        timeout={3000} //3 secs
+      />
+    </div>
       )}
     </div>
   );

@@ -3,6 +3,7 @@ import {WishButton2 } from '../Buttons/wish-button'
 import axios from "axios";
 import { useState } from "react";
 import { baseurl } from "../../utils/apiCalls";
+import { toast } from "react-toastify";
 
 export const CartCard = ({ product }) => {
   const { dispatch } = useCart();
@@ -18,9 +19,11 @@ export const CartCard = ({ product }) => {
     console.log(response)
     if (response.status === 200) {
       dispatch({ type: "INCREASE_QTY", payload: product });
+      toast.success("Quantity Increased")
       setAdd(false);
     }
     setAdd(false);
+    
   };
 
   const decreaseQuantity = async (product) => {
@@ -29,11 +32,13 @@ export const CartCard = ({ product }) => {
       const response = await axios.post(`${baseurl}/cart/${product._id}/dec`, { });
       if (response.status === 200) {
         dispatch({ type: "DECREASE_QTY", payload: product });
+        toast.success("Quantity Decreased")
       }
     } else {
       removeFromCart(product);
     }
     setLess(false);
+    
   };
 
   const removeFromCart = async (product) => {
@@ -41,9 +46,11 @@ export const CartCard = ({ product }) => {
     const response = await axios.delete(`${baseurl}/cart/${product._id}`);
     if (response.status === 200) {
       dispatch({ type: "REMOVE_FROM_CART", payload: product });
+      toast.success("Product Removed")
       setRemove(false);
     }
     setRemove(false);
+    
   };
 
   return (
