@@ -1,9 +1,8 @@
 import { AddressDisplay } from "../components/Address/Address Display Box Main/addressDisplay"
-
-export const Address = () => {
+export const Order = () => {
     return(
         <>
-        <AddressDisplay/>
+        <AddressDisplay select/>
         </>
     )
 }

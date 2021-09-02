@@ -4,8 +4,9 @@ import { baseurl } from "../../../utils/apiCalls";
 import axios from "axios";
 import { ViewAddressBox } from "../View Address Box/viewAddressBox";
 import { AddAddressBox } from "../Add Address Box/addAddressBox";
+import { SelectAddressBox } from "../Select Addresss Box/selectAddressBox";
 
-export const AddressDisplay = () => {
+export const AddressDisplay = ({ select }) => {
   const [addAddress, setAddAddress] = useState(false);
   const [data, setData] = useState({
     fullName: "",
@@ -30,12 +31,18 @@ export const AddressDisplay = () => {
   useEffect(() => fetchAddress(), [addAddress]);
 
   return (
-    <div style={{marginTop:'2rem'}} >
+    <div style={{ marginTop: "2rem" }}>
       {addAddress ? (
         <AddAddressBox
           setAddAddress={setAddAddress}
           setData={setData}
           data={data}
+          fetchAddress={fetchAddress}
+        />
+      ) : select === true ? (
+        <SelectAddressBox 
+        setAddAddress={setAddAddress}
+          allAddresses={allAddresses}
           fetchAddress={fetchAddress}
         />
       ) : (

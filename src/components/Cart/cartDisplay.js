@@ -3,6 +3,7 @@ import { CartCard } from "../Cards/cartProductCard";
 import "./cart.css";
 import { useEffect, useState } from "react";
 import {Loader} from '../Loader/loader'
+import { Link } from "react-router-dom";
 
 export const CartDisplay = () => {
   const { state } = useCart();
@@ -34,7 +35,7 @@ export const CartDisplay = () => {
         .reduce((a, b) => a + b, 0)
     );
   });
-
+console.log(state)
   return (
     <div className="cart-page-outer">
       <div>
@@ -67,7 +68,7 @@ export const CartDisplay = () => {
             <p>₹ {mrp - dizcount + delCh}</p>
           </div>
           <div className="sub-fields battan">
-            <button style={{cursor:'not-allowed'}} className="nm-btn2"  >Checkout</button>
+          <Link to="/order"><button className="nm-btn2"  >  Checkout</button></Link>
           </div>
         </div>
       )}
