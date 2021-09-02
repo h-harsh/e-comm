@@ -31,7 +31,7 @@ export const LoginBox = () => {
       </button>
       <button
         className="login-item nm-btn2 an"
-        onClick={() => loginHandler('ajayk', 'Ajayk123')}
+        onClick={() => loginHandler('pharsh', 'Harsh123')}
       >
         Login as Guest
       </button>
