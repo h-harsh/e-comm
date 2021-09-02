@@ -45,10 +45,10 @@ export const ProductDetailsCard = ({ product }) => {
             <h3>Description</h3>
             <p>
               {" "}
-              This is product description section , hope we maeki it something
-              soon, but no what writing, no see as of any for var used in the
-              This is product description section , hope we maeki it something
-              soon, but no what writing, no see as of any for var used in the{" "}
+              This is product description section , hope we make it something
+              soon, but no idea what will we writing,and this product can be used st
+              This is product description section , hope we make it something
+              soon, but no what writing,and this product can be used st{" "}
             </p>
           </div>
           <div>

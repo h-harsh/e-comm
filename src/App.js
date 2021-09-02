@@ -8,7 +8,7 @@ import {NavBar} from './components/Nav Bar/navBar'
 
 export default function App() {
   return (
-    <div className="App">
+    <div >
       <NavBar />
       <main style={{marginTop:"5rem", height:"100vh"}}>
       <Routes>

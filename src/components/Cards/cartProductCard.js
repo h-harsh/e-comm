@@ -56,7 +56,7 @@ export const CartCard = ({ product }) => {
           <div class="horiz-prod-sub-in">
             <p class="brand-name">{product.brand}</p>
             <h3 class="product-name">{product.name}</h3>
-            <p class="prod-desc">Hello ye bhi altu faltu product hai</p>
+            <p class="prod-desc">A sample product line for temp use</p>
             <div class="horiz-prod-btns">
               
               <button
