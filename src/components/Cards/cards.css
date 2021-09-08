@@ -1,67 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,500&display=swap');
-.out-box{
-    display: flex;
-    justify-content: center;
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,500&display=swap");
+.out-box {
+  display: flex;
+  justify-content: center;
 }
 
-.product-details{
-    display: flex;
-    justify-content: space-around;
+.product-details {
+  display: flex;
+  justify-content: space-around;
 }
 .container img {
-    width: 30rem;
-    height: 35rem;
-    
+  width: 25rem;
+  height: 30rem;
+  border: 1px solid black;
 }
-.c-details{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: whitesmoke;
+.c-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: whitesmoke;
 }
-.big{
-    height: 50rem;
+.big {
+  height: 60rem;
 }
-.small{
-    height:40rem
-}
-
-
-.title-name{
-    font-size: 3rem;
-    font-family: ui-monospace;
-}
-p span{
-    font: message-box;
+.small {
+  height: 40rem;
 }
 
-.prices{
-    font-size: 1.5rem;
+.title-name {
+  font-size: 3rem;
+  font-family: ui-monospace;
 }
-.price .dis-price{
-    font-weight: bold;
-}
-.price .disc{
-    color: #af370b;
+p span {
+  font: message-box;
 }
 
-.extra-details{
-    font-size: 0.9rem;
-    display: block;
+.prices {
+  font-size: 1.5rem;
+  display: flex;
+
 }
-.extra-details-hide{
-    display: none;
+.price .dis-price {
+  font-weight: bold;
+  /* margin-right: 1rem; */
+}
+.price-orig{
+    margin: 0 1rem;
+}
+.price .disc {
+  color: #af370b;
+  /* margin-right: 1rem; */
 }
 
+.extra-details {
+  font-size: 0.9rem;
+  display: block;
+}
+.extra-details-hide {
+  display: none;
+}
 
-.card{
-    text-align: left;
-    margin: 1.5rem !important;
+.card {
+  text-align: left;
+  margin: 1.5rem !important;
+  padding: 0.5rem;
 }
 .product-name {
-    color: black;
-    text-decoration-line: none;
+  color: black;
+  text-decoration-line: none;
 }
-.icon-btn .fa-heart:before{
-    font-size: 1.5rem;
+.icon-btn .fa-heart:before {
+  font-size: 1.5rem;
 }

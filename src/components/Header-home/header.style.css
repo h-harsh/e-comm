@@ -1,62 +1,60 @@
 /* Home banner  */
 .banner {
-    position: relative;
-  }
-  .banner-img {
-    background-image: url(../../images/banner-img.jpg);
-  
-    background-size: cover;
-    height: 85vh;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
+  position: relative;
+}
+.banner-img {
+  /* background-image: url(../../images/banner-img.jpg); */
+  background-image: url(https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  background-position: bottom;
+  background-size: cover;
+  height: 85vh;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.banner-title {
+  color: white;
+  font-size: 6rem;
+  text-shadow: -7px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+.banner-tagline {
+  margin-bottom: 1.5rem;
+  color: whitesmoke;
+  background: #2e1717b8;
+}
+.banner-btn {
+  background: border-box;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 460px) {
   .banner-title {
-    color: white;
-    font-size: 6rem;
-    text-shadow: -7px 1px 0 #000,
-          1px 1px 0 #000, 
-          1px -1px 0 #000,
-          -1px -1px 0 #000;
+    font-size: 3rem;
   }
   .banner-tagline {
-    margin-bottom: 1.5rem;
-    color: whitesmoke;
-    background: #00000040;
-  
+    font-size: 1.3rem;
+  }
+  h2 .nm-btn2 {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .banner-title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  h2 .nm-btn2 {
+    width: fit-content;
+  }
+  .banner-tagline {
+    font-size: 1rem;
   }
   .banner-btn {
-    background: border-box;
-    font-weight: bold;
+    font-size: small;
   }
-
-  @media screen and (max-width: 460px) {
-    .banner-title{
-      font-size: 3rem;
-    }
-    .banner-tagline{
-      font-size: 1.3rem;
-    }
-    h2 .nm-btn2{
-      width: fit-content;
-    }
-  }
-  
-  @media screen and (max-width: 375px) {
-    .banner-title{
-      font-size: 2rem;
-      margin-bottom: 0.8rem;
-    }
-    h2 .nm-btn2{
-      width: fit-content;
-    }
-    .banner-tagline{
-      font-size: 1rem;
-    }
-    .banner-btn{
-      font-size: small;
-    }
-  }
+}

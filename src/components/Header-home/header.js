@@ -7,13 +7,16 @@ export const Header = () => {
     <>
       <div className="banner">
         <div className="banner-img">
-          <div className="banner-text-box">
-            <h1 className="banner-title">FASHION & YOU</h1>
+          {/* <div className="banner-text-box"> */}
+            <h1 className="banner-title">Financial literacy</h1>
+            <div>
             <h2 className="banner-tagline">
-              A single statement tag line, will write later, Okay na
+              The importance of being Financially literate has became more significiant than ever in today's world
             </h2>
-            <Link to="/products" className="nm-btn2 banner-btn"> Discover More </Link>
-          </div>
+            <Link to="/products" className="nm-btn2 banner-btn"> Start Exploring </Link>
+            </div>
+            
+          {/* </div> */}
         </div>
       </div>
     </>

@@ -2,3 +2,9 @@
     display: inline-block !important;
     background-color: white !important;
 }
+.horiz-prod{
+    text-align: left;
+}
+.horiz-prod-img-order{
+    height: 8rem;
+}

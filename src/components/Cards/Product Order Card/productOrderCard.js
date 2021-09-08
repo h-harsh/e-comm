@@ -9,12 +9,16 @@ export const ProductOrderCard = ({ product }) => {
       <div class="horiz-prod">
         <div class="horiz-prod-sub">
           <div>
-            <img class="horiz-prod-img" src={product.image} alt="" />
+            <img class="horiz-prod-img horiz-prod-img-order " src={product.image} alt="" />
           </div>
           <div class="horiz-prod-sub-in">
-            <p class="brand-name">{product.brand}</p>
             <h3 class="product-name">{product.name}</h3>
-            <p class="prod-desc">There's a product description always available</p>
+            <p class="brand-name">By:{product.author}</p>
+            <p class="brand-name" >
+              <span>Delivery:</span>{" "}
+              {product.fastDelivery ? "Fast Delivery" : "Delayed"}
+            </p>
+            <p class="brand-name">Quantity: X {product.qty}</p>
           </div>
         </div>
 

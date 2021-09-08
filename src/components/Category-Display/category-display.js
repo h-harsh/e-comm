@@ -9,52 +9,52 @@ export const CategoryDisplay = () => {
       <div className="card-category">
         <img
           className="cat-img"
-          src="https://images.unsplash.com/photo-1513001900722-370f803f498d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
+          src="https://pbs.twimg.com/profile_images/472421066007015424/MHUJj15g_400x400.jpeg"
           alt=""
         />
-        <h2>The category Name</h2>
-        <p>A line very short abot category only</p>
-        <Link to="/products" > <button className="nm-btn2">Browse More</button></Link>
+        <h2>Robert T. Kiyosaki</h2>
+        <p>Rich Dad Poor Dad</p>
+        <Link to="/products/613881ab1d9bd21dc0896c09" > <button className="nm-btn2">Explore</button></Link>
       </div>
       <div className="card-category">
         <img
           className="cat-img"
-          src="https://cdn.shopify.com/s/files/1/0253/1334/5602/files/39_408x.progressive.png.jpg?v=1575564173"
+          src="https://m.economictimes.com/thumb/msid-69535173,width-1200,height-900,resizemode-4,imgsize-220321/morgan-housel-1200.jpg"
           alt=""
         />
-        <h2>The category Name</h2>
-        <p>A line very short abot category only</p>
-        <Link to="/products" > <button className="nm-btn2">Browse More</button></Link>
+        <h2>Morgan Housel</h2>
+        <p>The Psychology of Money</p>
+        <Link to="/products/613881ab1d9bd21dc0896c07" > <button className="nm-btn2">Explore</button></Link>
       </div>
       <div className="card-category">
         <img
           className="cat-img"
-          src="https://cdn.shopify.com/s/files/1/0253/1334/5602/files/38_408x.progressive.png.jpg?v=1575564234"
+          src="https://www.simplylifeindia.com/uploads/8/1/1/5/8115412/anil-lamba-speakers-simply-life-india-speakers-bureau_orig.jpg"
           alt=""
         />
-        <h2>The category Name</h2>
-        <p>A line very short abot category only</p>
-        <Link to="/products" > <button className="nm-btn2">Browse More</button></Link>
+        <h2>Dr Anil Lamba</h2>
+        <p>Romancing the Balance Sheet</p>
+        <Link to="/products/613881ab1d9bd21dc0896c0b" > <button className="nm-btn2">Explore</button></Link>
       </div>
       <div className="card-category">
         <img
           className="cat-img"
-          src="https://cdn.shopify.com/s/files/1/0253/1334/5602/files/40_4e1d84a1-c290-4310-85b8-36e8a22192e1_408x.progressive.png.jpg?v=1575564250"
+          src="https://149483024.v2.pressablecdn.com/wp-content/uploads/2020/12/Eric-Jorgenson.jpg"
           alt=""
         />
-        <h2>The category Name</h2>
-        <p>A line very short abot category only</p>
-        <Link to="/products" > <button className="nm-btn2">Browse More</button></Link>
+        <h2>Eric Jorgenson</h2>
+        <p>The Almanack of Naval Ravikant</p>
+        <Link to="/products/613881ab1d9bd21dc0896c0c" > <button className="nm-btn2">Explore</button></Link>
       </div>
       <div className="card-category">
         <img
           className="cat-img"
-          src="https://cdn.shopify.com/s/files/1/0278/7180/5515/files/55_408x.progressive.png.jpg?v=1575648598"
+          src="https://s.wsj.net/public/resources/images/B3-DZ952_INVEST_E_20190515102620.jpg"
           alt=""
         />
-        <h2>The category Name</h2>
-        <p>A line very short abot category only</p>
-        <Link to="/products" ><button className="nm-btn2">Browse More</button></Link>
+        <h2>Benjamin Graham</h2>
+        <p>The Intelligent Investor</p>
+        <Link to="/products/613881ab1d9bd21dc0896c06" ><button className="nm-btn2">Explore </button></Link>
       </div>
 
       </div>
