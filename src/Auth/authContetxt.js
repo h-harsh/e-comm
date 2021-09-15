@@ -11,6 +11,7 @@ export const AuthProvider = ({children}) => {
     const [token, setToken] = useState(savedToken)
     const navigate = useNavigate()
     const [loginState, setLoginState] = useState("")
+    const [user, setUser] = useState(null)
 
     const [state, dispatch] = useReducer(reducerFunc, {});
     
@@ -45,6 +46,7 @@ export const AuthProvider = ({children}) => {
             // localStorage.setItem("login", JSON.stringify({loginStatus: true, token: response.data.token}));
             setToken(response.data.token)
             setLoginState("login success")
+            setUser(response.data.user)
             return navigate("/")
         }
         }catch(error){
@@ -53,7 +55,7 @@ export const AuthProvider = ({children}) => {
         }
     }
     return(
-        <AuthContext.Provider value={{dispatch, state, token, loginState, loginHandler, logoutHandler}}>
+        <AuthContext.Provider value={{dispatch, state, token, loginState, loginHandler, logoutHandler, user}}>
             {children}
         </AuthContext.Provider>
     )

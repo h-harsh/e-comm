@@ -5,6 +5,7 @@ import { baseurl } from "../../../utils/apiCalls";
 import { useCart } from "../../Cart/cartContext";
 import { OrderSuccessBox } from "../../Orders/Order Success Box/orderSuccessBox";
 import Loader from "react-loader-spinner"; 
+import { useAuth } from "../../../Auth/authContetxt";
 
 export const SelectAddressBox = ({
   setAddAddress,
@@ -21,6 +22,8 @@ export const SelectAddressBox = ({
   const [paymentId, setPaymentId] = useState("");
   const [signature, setSignature] = useState("");
 
+  const {user} = useAuth()
+console.log(user)
   useEffect(() => {
     (async function () {
       if (payment) {
@@ -61,7 +64,8 @@ export const SelectAddressBox = ({
       amount: response.data.amount,
       currency: "INR",
       name: "FinStore",
-      description: response.data.notes.description,
+      description: "For testing use payment@ybl as upi ID",
+      // description: response.data.notes.description,
       image: "",
       order_id: response.data.id, 
       handler: function (response) {
@@ -70,14 +74,14 @@ export const SelectAddressBox = ({
         setSignature(response.razorpay_signature);
         setPayment(true);
       },
-      // prefill: {
-      //   name: "Gaurav Kumar",
-      //   email: "gaurav.kumar@example.com",
-      //   contact: "9999999999",
-      // },
-      // notes: {
-      //   address: "Razorpay Corporate Office",
-      // },
+      prefill: {
+        name: user !== null ? user.fullName : "",
+        email: user !== null ? user.email : "testing@gmail.com",
+        contact: "9999999999",
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
       theme: {
         color: "black",
       },

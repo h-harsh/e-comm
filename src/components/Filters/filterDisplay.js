@@ -13,7 +13,7 @@ export const FilterDisplay = () => {
             name="sort"
             onChange={() => dispatch({ type: "SORT", payload: "HIGH-TO-LOW" })}
           />
-          Hight to low
+          High to low
         </label>
         <label>
           <input
