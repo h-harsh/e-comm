@@ -1,0 +1,67 @@
+/* cart card checkout */
+.cart-page-outer{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.checkout-box {
+  border: 0.5px solid gray;
+  width: 18rem;
+  padding: 0.6rem;
+  color: gray;
+  display: inline;
+  height: fit-content;
+  margin: 3rem;
+}
+.sub-fields {
+  display: flex;
+  justify-content: space-between;
+}
+.final-details {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+.total-amount {
+  color: black;
+  font-weight: bold;
+}
+.battan {
+  justify-content: center;
+}
+
+/* cart card edit */
+.horiz-card {
+  margin: 1rem;
+}
+.horiz-prod-price2 {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 900px) {
+  .cart-page-outer{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .horiz-card{
+    max-width: 100%;
+    width: 0;
+    width: fit-content;
+  }
+  .horiz-prod-sub{
+    flex-direction: column;
+  }
+  .buttons-horizontal{
+    display: flex;
+    flex-direction: column;
+  }
+  .horiz-prod{
+    flex-direction: column;
+  }
+
+}
+
+

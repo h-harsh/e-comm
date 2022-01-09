@@ -1,0 +1,19 @@
+.container-toast {
+    display: inline-block;
+    color: white;
+    background: red;
+    padding: 1rem;
+    position: fixed;
+    bottom: 1.5rem;
+    display: flex;
+    font-size: 1rem;
+    z-index: 100;
+  }
+  
+  .container-toast-btn {
+    background: red;
+    border: 0;
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+  }

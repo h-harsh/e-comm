@@ -1,0 +1,58 @@
+.nav-itm  a{
+    color: black !important;
+    text-decoration-line: none;
+}
+.icn-bx{
+    font-size: x-large;
+    position: relative;
+}
+.icon-badge{
+    font-size: 1rem !important;
+    position: absolute;
+    font-size: 1rem !important;
+    position: absolute;
+    top: 0.4rem;
+    left: 2.5rem;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    padding: 0.1rem;
+}
+
+.top-nav{
+    position: fixed;
+    top: 0;
+}
+
+@media screen and (max-width: 460px){
+    .resp {
+        display: none;
+    }
+}
+.resp-icon, .logout-icn{
+    display: none;
+}
+@media screen and (max-width: 460px){
+    .resp-txt {
+        display: none;
+    }
+    .resp-icon{
+        display: inline-block;
+        
+    }
+
+}
+@media screen and (max-width: 485px){
+    .logout-txt {
+        display: none;
+    }
+    .logout-icn{
+        display: inline-block;
+        
+    }
+
+}
+
+
+
+

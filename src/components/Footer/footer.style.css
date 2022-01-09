@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
+footer {
+  height: 7rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  position: relative;
+}
+.container {
+  margin: 1rem;
+  padding: 1rem;
+}
+footer p {
+  padding-bottom: 0.5rem;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+
+@media screen and (max-width: 400px) {
+  footer{
+    flex-direction: column;
+    height:unset;
+    justify-content: center;
+  }
+  .container {
+    margin: 0.2rem;
+    padding: 0.1rem;
+    margin-left: 1.5rem;
+  }
+}
+
