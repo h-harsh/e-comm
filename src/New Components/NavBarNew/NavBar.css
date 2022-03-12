@@ -1,0 +1,133 @@
+nav{
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6rem;
+    border-bottom: 2px solid whitesmoke;
+    /* width: 75%; */
+    margin: auto;
+}
+.nav-cont{
+    height:50px;   
+}
+
+.nav-items-cont{
+    width: 50%;
+}
+
+.nav-items-list{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item{
+    padding: 13px 5px;
+    margin: 5px;
+    font-size: 1.1rem;
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: var(--tectColor);
+    
+}
+.nav-btn{
+    padding: 5px;
+    margin: 5px;
+    background-color: #FA8128;
+}
+
+.menu-btn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #000;
+    display: none;
+    font-size: 2rem;
+}
+.fas{
+    color: var(--primaryColor);
+}
+@media(max-width: 500px){
+    nav{
+        padding: 0 1rem;
+    }
+    .nav-items-cont{
+        display: none;
+    }
+    .menu-btn{
+        display: initial;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 850px){
+    .tab-hide{
+        display: none;
+    }
+    nav{
+        padding: 0 1rem;
+    }
+}
+
+/* DisplayHoverItem */
+.sub-menu{
+    position: absolute;
+    top: 60px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    display: none;
+    z-index: 99;
+}
+.active{
+    display: flex !important;
+}
+.sub-menu a{
+    text-decoration: none;
+    color: black;
+}
+.sub-menu-item{
+    padding: 5px;
+    margin:  5px 13px;
+    
+}
+
+/* /:old */
+.icn-bx{
+    font-size: x-large;
+    position: relative;
+    /* background-color: yellow; */
+    margin-right: 0.8rem;
+}
+.icon-badge{
+    font-size: 1rem !important;
+    position: absolute;
+    font-size: 1rem !important;
+    position: absolute;
+    top: 0.2rem;
+    left: 1.6rem;
+    border-radius: 50%;
+    background: var(--bgLightColor);
+    color: black;
+    padding: 0.1rem 0.4rem;
+}
+
+.book-store{
+    text-decoration: none !important;
+    font-style: italic;
+    font-size: 2.3rem;
+    font-weight: 600;
+    font-family: 'Syne Mono', monospace;
+    color: var(--primaryColor);
+}
+.nav-logo-cont{
+    text-decoration: none;
+}
+.two-buttons{
+    display: flex;
+}

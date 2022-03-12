@@ -4,21 +4,17 @@ import "./header.style.css";
 
 export const Header = () => {
   return (
-    <>
-      <div className="banner">
-        <div className="banner-img">
-          {/* <div className="banner-text-box"> */}
-            <h1 className="banner-title">Financial literacy</h1>
-            <div>
-            <h2 className="banner-tagline">
-              The importance of being Financially literate has became more significiant than ever in today's world
-            </h2>
-            <Link to="/products" className="nm-btn2 banner-btn"> Start Exploring </Link>
-            </div>
-            
-          {/* </div> */}
+    <div className="banner">
+      <div className="banner-img">
+        <div className="banner-content">
+          <p className="banner-text">Reading is best for getting an idea</p>
+          <h1 className="banner-title">Start Reading</h1>
+          <Link to="/products" className="banner-button">
+            Explore
+          </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
+

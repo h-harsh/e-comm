@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+:root{
+  --primaryColor: #2f2b35;
+  --primaryAccentColor: #5a5462;
+  --secondaryColor:rgb(40, 205, 240);
+  --bgLightColor: #edf3f4; 
+
+  --textColor:rgb(34, 34, 34);
+  --textColorLight:rgb(117, 117, 117);
+
+}
+
+
 .App{
   text-align: center;
 }

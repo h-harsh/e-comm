@@ -1,7 +1,6 @@
-// import { NavBar } from './components/NavBar/navBar'
-import { React } from "react";
+import { React, useEffect, useState } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { PrivateRoute } from "./utils/privateRoute";
 import {
   ProductDetails,
@@ -15,16 +14,41 @@ import {
   Order,
   OrderHistory,
 } from "./Pages/index";
-import { NavBar } from "./components/Nav Bar/navBar";
+// import { NavBar } from "./components/Nav Bar/navBar";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { NavBar, MobileNavbar } from "./components";
 
 export default function App() {
+  const [mobileMenuActive, setMobileMenuActive] = useState(false);
+  const {pathname} = useLocation()
+
+  function handleMobileMenuActive() {
+    setMobileMenuActive(!mobileMenuActive);
+  }
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  useEffect(() => {
+    scrollToTop()
+  }, [pathname])
   return (
     <div>
-      <NavBar />
-      <main style={{ marginTop: "5rem", height: "100vh" }}>
+      {/* <NavBar /> */}
+      <NavBar
+        mobileMenuActive={mobileMenuActive}
+        handleMobileMenuActive={handleMobileMenuActive}
+      />
+      <MobileNavbar
+        mobileMenuActive={mobileMenuActive}
+        handleMobileMenuActive={handleMobileMenuActive}
+      />
+      {/* <main style={{ marginTop: "5rem", height: "100vh" }}> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="products" element={<Products />} />
@@ -38,7 +62,7 @@ export default function App() {
           <Route path="products/:productId" element={<ProductDetails />} />
         </Routes>
         <ToastContainer position="bottom-right" theme="dark" autoClose={3000} />
-      </main>
+      {/* </main> */}
     </div>
   );
 }

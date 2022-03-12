@@ -1,0 +1,30 @@
+.p-button {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 9px 29px;
+  border-radius: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 25px;
+  text-decoration: none;
+}
+
+.p-button-primary{
+  color: #ffffff;
+  background-color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+}
+.p-button-primary:hover {
+  background: var(--primaryAccentColor);
+  border: 2px solid var(--primaryAccentColor);
+}
+
+.p-button-secondary{
+  background-color: white;
+  color: var(--primaryColor);
+  border: 2px solid var(--primaryColor);
+}
+.p-button-secondary:hover{
+  background-color:var(--bgLightColor) ;
+}

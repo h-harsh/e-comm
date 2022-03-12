@@ -1,3 +1,8 @@
+#myTopNav{
+    /* background-color: transparent; */
+    border: none;
+}
+
 .nav-itm  a{
     color: black !important;
     text-decoration-line: none;
