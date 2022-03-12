@@ -1,3 +1,4 @@
 import {PrimaryButton, SecondaryButton} from "./Buttons/Buttons";
+import { CardWPhotoTitle } from "./Cards";
 
-export {PrimaryButton, SecondaryButton}
+export {PrimaryButton, SecondaryButton, CardWPhotoTitle}
