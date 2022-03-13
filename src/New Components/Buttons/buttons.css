@@ -23,9 +23,9 @@
 
 .p-button-secondary{
   background-color: white;
-  color: var(--primaryColor);
+  color: var(--primaryColor) !important;
   border: 2px solid var(--primaryColor);
 }
 .p-button-secondary:hover{
-  background-color:var(--bgLightColor) ;
+  background-color:var(--bgLightColor) !important ;
 }

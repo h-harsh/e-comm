@@ -1,9 +1,11 @@
+import './cart.css'
 import { useCart } from "./cartContext";
 import { CartCard } from "../Cards/cartProductCard";
 import "./cart.css";
 import { useEffect, useState } from "react";
 import {Loader} from '../Loader/loader'
 import { Link } from "react-router-dom";
+import { PrimaryButton } from "../../New Components";
 
 export const CartDisplay = () => {
   const { state } = useCart();
@@ -46,7 +48,7 @@ console.log(state)
       {state.length < 1 || state.length === undefined ? (
         <Loader text={"Cart is Empty."} />
       ) : (
-        <div className="checkout-box">
+        <div className="checkout-box only-card bg-color-white">
           <div className="sub-fields">
             <p className="final-details">Final Details({state.length} items)</p>
           </div>
@@ -68,7 +70,7 @@ console.log(state)
             <p>₹ {mrp - dizcount + delCh}</p>
           </div>
           <div className="sub-fields battan">
-          <Link to="/order"><button className="nm-btn2"  >  Checkout</button></Link>
+          <Link to="/order"><PrimaryButton text="Checkout"/></Link>
           </div>
         </div>
       )}

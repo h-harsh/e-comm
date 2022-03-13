@@ -6,13 +6,14 @@
 }
 
 .checkout-box {
-  border: 0.5px solid gray;
+  border-radius: 5px;
   width: 18rem;
   padding: 0.6rem;
   color: gray;
   display: inline;
   height: fit-content;
-  margin: 3rem;
+  padding: 1.5rem;
+  margin: 1.5rem;
 }
 .sub-fields {
   display: flex;
@@ -31,13 +32,26 @@
 }
 
 /* cart card edit */
+
 .horiz-card {
   margin: 1rem;
+  width: 27rem;
+  padding: 1rem;
 }
 .horiz-prod-price2 {
   flex-direction: column;
 }
-
+.buttons-horizontal{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 0.7rem;
+}
+.horiz-prod-sub-in{
+  padding: 0 1rem;
+}
+.battan{
+  padding-top:  1rem ;
+}
 @media screen and (max-width: 900px) {
   .cart-page-outer{
     flex-direction: column;
@@ -51,12 +65,13 @@
     width: 0;
     width: fit-content;
   }
-  .horiz-prod-sub{
+  /* .horiz-prod-sub{
     flex-direction: column;
-  }
+  } */
   .buttons-horizontal{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    
   }
   .horiz-prod{
     flex-direction: column;

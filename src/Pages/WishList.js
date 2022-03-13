@@ -4,7 +4,7 @@ import {Footer} from '../components/Footer/footer'
 export const WishList = () => {
     return(
         <>
-        <div style={{minHeight:"85vh"}}>
+        <div style={{minHeight:"85vh"}} className="bg-color-light">
             <WishDisplay />
         </div>
             <Footer />

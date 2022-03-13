@@ -1,9 +1,11 @@
+import './cartProductCard.css'
 import { useCart } from "../Cart/cartContext";
 import { WishButton2 } from "../Buttons/wish-button";
 import axios from "axios";
 import { useState } from "react";
 import { baseurl } from "../../utils/apiCalls";
 import { toast } from "react-toastify";
+import {PrimaryButton, SecondaryButton} from '../../New Components'
 
 export const CartCard = ({ product }) => {
   const { dispatch } = useCart();
@@ -54,7 +56,7 @@ export const CartCard = ({ product }) => {
   };
 
   return (
-    <div class="horiz-card">
+    <div class="horiz-card only-card bg-color-white">
       <div class="horiz-prod">
         <div class="horiz-prod-sub">
           <div>
@@ -97,9 +99,10 @@ export const CartCard = ({ product }) => {
         </div>
       </div>
       <div class="buttons-horizontal">
-        <button class="nm-btn2 horiz" onClick={() => removeFromCart(product)}>
+        <button class="nm-btn2 horiz p-button p-button-secondary " onClick={() => removeFromCart(product)}>
           {remove ? "removing" : "Remove"}
         </button>
+        
         <WishButton2 product={product} />
       </div>
     </div>

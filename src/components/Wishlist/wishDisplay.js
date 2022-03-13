@@ -1,22 +1,22 @@
 // import {ProductCard} from '../Cards/producrCard'
-import {ProductCard} from '../../New Components'
-import {useWish} from './wishContext';
-import {Loader} from '../Loader/loader'
+import { ProductCard } from "../../New Components";
+import { useWish } from "./wishContext";
+import { Loader } from "../Loader/loader";
 
 export const WishDisplay = () => {
-  const { wishState } = useWish()
-  console.log(  wishState)
+  const { wishState } = useWish();
+  console.log(wishState);
   return (
-    <div style={{textAlign: "center"}}>
-      { wishState?.length < 1 ? <Loader text={"Start Wishlisting"} />
-      :
-      wishState.map((product) => {
-          return (
-              <ProductCard product={product} />
-          )
-      })
-      }
+    <div style={{ textAlign: "center" }}>
+      {wishState?.length < 1 ? (
+        <Loader text={"Start Wishlisting"} />
+      ) : (
+        <div className="card-holder ">
+          {wishState.map((product) => {
+            return <ProductCard product={product} />;
+          })}
+        </div>
+      )}
     </div>
   );
 };
-
