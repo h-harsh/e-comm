@@ -251,3 +251,9 @@ h6 {
 .cl-orng-text {
   color: #ffaa46;
 }
+.bg-color-light{
+  background-color: var(--bgLightColor);
+}
+.bg-color-white{
+  background-color: white;
+}

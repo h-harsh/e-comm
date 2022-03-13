@@ -1,24 +1,26 @@
 import { useFilter } from "../Filters/filterContext";
 import { baseurl } from "../../utils/apiCalls";
+import './serachBar.css'
 
-export const SearchBar = () => {
+export const SearchBar = ({className}) => {
   const { setStatus, status } = useFilter();
 
   return (
     <>
-      { window.location.href === "https://finstore.netlify.app/products" ? (
+      {/* { window.location.href === "https://finstore.netlify.app/products" ? ( */}
         <input
-          className="search-thing"
+
+          className={className}
           type="text"
           placeholder="Search items..."
           onChange={(event) => setStatus(event.target.value)}
           value={status}
         />
-      ) : null}
-      {/* <button
-      className="btn btn-link1"
+      {/* ) : null} */}
+      <button
+      className="btn clear-button-searchbar"
       onClick={() => setStatus("")}
-      >X</button> */}
+      >Clear</button>
     </>
   );
 };

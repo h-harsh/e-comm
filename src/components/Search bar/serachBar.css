@@ -1,0 +1,8 @@
+.clear-button-searchbar{
+    color: black;
+}
+@media screen and (max-width: 510px) {
+    .clear-button-searchbar{
+        display: none;
+    }   
+  }

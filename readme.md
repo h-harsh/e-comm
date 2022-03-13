@@ -7,3 +7,12 @@ It has the following functionalities
 4. Search items
 6. Product details
 
+
+<!-- import './common.css'
+
+import { FilterDisplay } from "../components/Filters/filterDisplay";
+import { SearchBar } from '../components/Search bar/searchBar';
+import { ProductsDisplay } from "../components/allProducts";
+import { Footer } from "../components/Footer/footer";
+
+

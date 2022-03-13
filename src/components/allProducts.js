@@ -1,3 +1,4 @@
+import './common.css'
 import { useFilter } from "./Filters/filterContext";
 // import { ProductCard } from "./Cards/producrCard";
 import "../App.css";
@@ -18,9 +19,11 @@ export const ProductsDisplay = () => {
           <Loader type="ThreeDots" color="black" height={100} width={100} />
         </div>
       ) : (
-        searchedFilteredData.map((product) => {
-          return <ProductCard product={product} />;
-        })
+        <div className="card-holder card-holder-allproducts">
+          {searchedFilteredData.map((product) => {
+            return <ProductCard product={product} />;
+          })}
+        </div>
       )}
     </div>
   );

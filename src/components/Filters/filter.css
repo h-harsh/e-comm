@@ -8,3 +8,18 @@ fieldset:hover{
     box-shadow: 3px 3px 3px rgb(168, 164, 164);
     transition: 0.5s;
 }
+.filter-box{
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+}
+@media screen and (max-width: 510px) {
+    .filter-box{
+        background-color: white;
+        border-radius: 5px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+  }

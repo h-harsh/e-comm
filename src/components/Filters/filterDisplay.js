@@ -4,7 +4,7 @@ import './filter.css'
 export const FilterDisplay = () => {
   const { dispatch } = useFilter()
   return (
-    <>
+    <div className='filter-box'>
       <fieldset>
         <legend>Sort by Price</legend>
         <label>
@@ -43,6 +43,6 @@ export const FilterDisplay = () => {
           In Stock only
         </label>
       </fieldset>
-    </>
+    </div>
   );
 };
