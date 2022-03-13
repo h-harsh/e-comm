@@ -8,9 +8,11 @@ export const Home = () => {
   return (
     <>
     <Header />
-    <CategoryDisplay data={dataAuthors} title={'Famous  Authors '} />
-    <WideBannerDisplay/>
     <IconsSection data={dataIconsSection}  title={'About Us'}/>
+    <WideBannerDisplay/>
+    <CategoryDisplay data={dataAuthors} title={'Famous  Authors '} />
+    
+    
     <Footer/>
     </>
   );

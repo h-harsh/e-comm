@@ -1,4 +1,5 @@
-import {ProductCard} from '../Cards/producrCard'
+// import {ProductCard} from '../Cards/producrCard'
+import {ProductCard} from '../../New Components'
 import {useWish} from './wishContext';
 import {Loader} from '../Loader/loader'
 

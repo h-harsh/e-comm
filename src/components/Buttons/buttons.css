@@ -1,5 +1,5 @@
 .btn2-disabled {
-  color: rgb(82, 82, 82) !important;
+  color: white !important;
   border: 1px solid rgb(75, 75, 75) !important;
 }
 .cart-btn-box {
@@ -8,17 +8,22 @@
 }
 .cart-btn-box p {
   visibility: hidden;
-  background-color: whitesmoke;
+  background-color: transparent;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
-  top: -1rem;
-  left: 33%;
+  bottom: -1.2rem;
+  left: 26%;
   z-index: 1;
 }
 
 .cart-btn-box:hover p {
   visibility: visible;
   transition: 0.5s;
+}
+
+.sp-button, .nm-btn2{
+  width: max-content;
+  min-width: 11rem;
 }

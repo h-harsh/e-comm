@@ -40,12 +40,12 @@ export const CartButton = ({ product }) => {
     <>
       {idArray.includes(product._id || product.id) ? (
         <Link to="/cart">
-          <button className="nm-btn2">Go To Cart</button>
+          <button className="nm-btn2 p-button p-button-primary">Go To Cart</button>
         </Link>
       ) : (
         <div className="cart-btn-box">
         <button
-          className={product.inStock ? "sp-button" : "nm-btn2 btn2-disabled"}
+          className={product.inStock ? "sp-button p-button p-button-primary" : "nm-btn2 btn2-disabled p-button p-button-primary"}
           disabled={product.inStock ? false : true}
           // onClick={() => addToCart(product)}
           onClick={token ? () => addToCart(product) : () => toast.error("You need to login") }

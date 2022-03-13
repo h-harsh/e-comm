@@ -22,7 +22,7 @@ export const WishButton = ({ product }) => {
       //  onClick={() => removeFromWishList(product)} 
        onClick={token ? () => removeFromWishList(product) : () => setToastStatus(true) }
        >
-        <i class="fas fa-heart"></i>
+        <i style={{color:'#2f2b35'}} class="fas fa-heart"></i>
       </button>
       :
       <button className="icon-btn" 

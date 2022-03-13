@@ -1,7 +1,8 @@
 import { useFilter } from "./Filters/filterContext";
-import { ProductCard } from "./Cards/producrCard";
+// import { ProductCard } from "./Cards/producrCard";
 import "../App.css";
 import Loader from "react-loader-spinner";
+import { ProductCard } from "../New Components/Cards";
 
 export const ProductsDisplay = () => {
   const { searchedFilteredData, products } = useFilter();
