@@ -18,7 +18,7 @@ export const WishButton = ({ product }) => {
 
   return (<>
     { idArray.includes(product._id || product.id) ?
-      <button className="icon-btn"
+      <button className="icon-btn "
       //  onClick={() => removeFromWishList(product)} 
        onClick={token ? () => removeFromWishList(product) : () => setToastStatus(true) }
        >
@@ -54,14 +54,14 @@ export const WishButton2 = ({ product, lg}) => {
   return (<>
 
     { idArray.includes(product._id || product.id) ?
-      <button className={lg ? "nm-btn2": "nm-btn2 horiz" }
+      <button className={lg ? "nm-btn2 p-button p-button-secondary": "nm-btn2 p-button p-button-secondary horiz " }
       //  onClick={() => removeFromWishList(product)}
        onClick={token ? () => removeFromWishList(product) : () => setToastStatus(true) }
        >
         <i class="fas fa-heart"></i>
       </button>
       :
-      <button className={lg ? "nm-btn2": "nm-btn2 horiz" } 
+      <button className={lg ? "nm-btn2 p-button p-button-secondary": "nm-btn2 horiz p-button p-button-secondary" } 
       // onClick={() => addToWishList(product)}
       onClick={token ? () => addToWishList(product) : () => setToastStatus(true) }
       > 

@@ -38,6 +38,7 @@ export const SignUpBox = () => {
           },
         }
       );
+      console.log(response)
       if (response.status === 200) {
         console.log(userName, password);
         loginHandler(userName, password);
@@ -62,7 +63,7 @@ export const SignUpBox = () => {
             <p>Full name</p>
             <input
               className="login-input"
-              placeholder="Full Name"
+              placeholder="Full Name (min 6 char)"
               type="text"
               onChange={(event) => setFullName(event.target.value)}
             ></input>
@@ -71,7 +72,7 @@ export const SignUpBox = () => {
             <p>Username</p>
             <input
               className="login-input"
-              placeholder="UserName"
+              placeholder="UserName (min 3 char)"
               type="text"
               onChange={(event) => setUserName(event.target.value)}
             />
@@ -89,7 +90,7 @@ export const SignUpBox = () => {
             <p>Password</p>
             <input
               className="login-input"
-              placeholder="Password"
+              placeholder="(8 char,1 number, uppercase and lowercase)"
               type="password"
               onChange={(event) => setPassword(event.target.value)}
             />
