@@ -48,7 +48,7 @@ export default function App() {
         mobileMenuActive={mobileMenuActive}
         handleMobileMenuActive={handleMobileMenuActive}
       />
-      {/* <main style={{ marginTop: "5rem", height: "100vh" }}> */}
+      <main style={{  height: "100vh" }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="products" element={<Products />} />
@@ -62,7 +62,7 @@ export default function App() {
           <Route path="products/:productId" element={<ProductDetails />} />
         </Routes>
         <ToastContainer position="bottom-right" theme="dark" autoClose={3000} />
-      {/* </main> */}
+      </main>
     </div>
   );
 }

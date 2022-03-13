@@ -1,28 +1,77 @@
-.login-box{
-    flex-direction: column;
-    display: inline-flex;
-    padding: 2rem;
-    border: 2px solid white;
-    margin: 1rem;
-    border-radius: 10%;
-    box-shadow: 6px 6px 8px 5px grey;
+
+/* new///////////////////////////////////////// */
+.login-container {
+  display: flex;
+  /* border: 2px solid black; */
+  max-width: 50rem;
+  height: 32rem;
+  margin-top: -2.5rem;
+}
+.login-image-container,
+.login-data-container {
+  /* width: 50%; */
+  padding: 2rem;
+}
+.login-image-container {
+  background-color: var(--primaryAccentColor);
+  /* background-color: var(--secondaryColor); */
+
+  padding: 4rem;
+  width: 53%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-data-container {
+  background-color: white;
+  width: 47%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.login-image {
+  width: 100%;
+  /* object-fit: contain; */
+}
+.login-input {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background-color: transparent;
+  color: var(--textColor);
+  /* padding: 0  0.3rem; */
 }
 
-.login-item{
-    margin: 1rem;
+.login-data-sub-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
-.an{
-    padding: 0 !important; 
+.each-data-cont {
+  margin: 0.5rem 0;
 }
-.login-box input {
-    font-size: 1.2rem;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+.each-data-cont p {
+  text-align: left;
+  padding-left: 0.5rem;
+  color: var(--textColorLight);
+  margin-bottom: -0.3rem;
+  font-size: 0.9rem;
 }
-@media screen and (max-width:450px){
-    .login-box{
-        margin: 0;
-        padding: 0.5rem;
+.for-login-btn-cont{
+    padding-top: 1rem;
+}
+.for-signup-btn-cont{
+    padding: 0 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+    .login-image-container{
+        display: none;
     }
-}
+    .login-data-container{
+        width: 100%;
+    }
+    
+  }

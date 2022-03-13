@@ -3,6 +3,9 @@ import { useState } from "react";
 import { useAuth } from "../../Auth/authContetxt";
 import "./signupBox.css";
 import { baseurl } from "../../utils/apiCalls";
+import loginImage from "./signup3.svg";
+import { PrimaryButton, SecondaryButton } from "../../New Components";
+import { Link } from "react-router-dom";
 
 export const SignUpBox = () => {
   const { loginHandler } = useAuth();
@@ -31,9 +34,8 @@ export const SignUpBox = () => {
         {
           headers: {
             ContentType: "application/json",
-            'Access-Control-Allow-Origin' : '*'
+            "Access-Control-Allow-Origin": "*",
           },
-          
         }
       );
       if (response.status === 200) {
@@ -47,43 +49,62 @@ export const SignUpBox = () => {
   console.log(fullName, userName, email, password);
 
   return (
-    <div className="signup-box">
-      <input
-        className="signup-item"
-        placeholder="Full Name"
-        type="text"
-        onChange={(event) => setFullName(event.target.value)}
-      />
+    <div className="login-container only-card">
+      <div className="login-image-container">
+        <img className="login-image" src={loginImage} />
+      </div>
 
-      <input
-        className="signup-item"
-        placeholder="UserName"
-        type="text"
-        onChange={(event) => setUserName(event.target.value)}
-      />
-
-      <input
-        className="signup-item"
-        placeholder="Email"
-        type="text"
-        onChange={(event) => setEmail(event.target.value)}
-      />
-
-      <input
-        className="signup-item"
-        placeholder="Password"
-        type="password"
-        onChange={(event) => setPassword(event.target.value)}
-      />
-
-      <button
-        className="signup-item nm-btn2 an"
-        onClick={() =>
-          signUpHandler(fullName, userName, email, password, loginHandler)
-        }
-      >
-        Sign Up
-      </button>
+      <div className="login-data-container">
+        <h1 className="book-store">Book Store</h1>
+        <h4>Welcome to Goa Singham</h4>
+        <div className="login-data-sub-box">
+          <div className="each-data-cont">
+            <p>Full name</p>
+            <input
+              className="login-input"
+              placeholder="Full Name"
+              type="text"
+              onChange={(event) => setFullName(event.target.value)}
+            ></input>
+          </div>
+          <div className="each-data-cont">
+            <p>Username</p>
+            <input
+              className="login-input"
+              placeholder="UserName"
+              type="text"
+              onChange={(event) => setUserName(event.target.value)}
+            />
+          </div>
+          <div className="each-data-cont">
+            <p>Email address</p>
+            <input
+              className="login-input"
+              placeholder="Email"
+              type="text"
+              onChange={(event) => setEmail(event.target.value)}
+            />
+          </div>
+          <div className="each-data-cont">
+            <p>Password</p>
+            <input
+              className="login-input"
+              placeholder="Password"
+              type="password"
+              onChange={(event) => setPassword(event.target.value)}
+            />
+          </div>
+          <div className="for-login-btn-cont">
+            <PrimaryButton
+              text="Register"
+              clickHandler={() =>
+                signUpHandler(fullName, userName, email, password, loginHandler)
+              }
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+
