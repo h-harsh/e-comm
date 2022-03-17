@@ -5,11 +5,11 @@
   /* border: 2px solid black; */
   max-width: 50rem;
   height: 32rem;
-  margin-top: -2.5rem;
+  margin-top: 3.5rem;
 }
 .login-image-container,
 .login-data-container {
-  /* width: 50%; */
+  width: 50%;
   padding: 2rem;
 }
 .login-image-container {
@@ -17,14 +17,14 @@
   /* background-color: var(--secondaryColor); */
 
   padding: 4rem;
-  width: 53%;
+  /* width: 53%; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .login-data-container {
   background-color: white;
-  width: 47%;
+  /* width: 47%; */
   text-align: center;
   display: flex;
   flex-direction: column;

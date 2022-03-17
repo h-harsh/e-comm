@@ -50,8 +50,8 @@ const NavBar = ({ mobileMenuActive, handleMobileMenuActive }) => {
           </li>
 
           {
-            !token && <li className="nav-item">
-            <Link to="/contact-us">Contact Us</Link>
+            !token && <li style={{color:'white'}} className="nav-item">
+            <Link to="/">Home</Link>
           </li>
           }
 

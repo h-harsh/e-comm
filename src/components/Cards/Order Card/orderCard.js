@@ -10,7 +10,7 @@ export const OrderCard = ({ item }) => {
   };
 //    {/* <p>{item.date.toLocaleDateString("en-US", options)}</p> */}
   return (
-    <div className="order-main-box">
+    <div className="order-main-box  only-card ">
       <div className="order-p1">
         <p> <span>Order Id:</span> {item.orderId}</p>
         <p> <span>Total Amount:</span> ₹{item.amount}</p>

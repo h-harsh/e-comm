@@ -20,11 +20,11 @@ export const ViewAddressBox = ({
   return (
     <div>
       <div className="address-display-cont">
-      <button className="nm-btn2 add-address-btn"  onClick={() => setAddAddress(true)}>Add new address</button>
+      <button className=" add-address-btn p-button p-button-primary"  onClick={() => setAddAddress(true)}>Add new address</button>
         {allAddresses.length > 0 ? (
           allAddresses.map((item) => {
             return (
-              <div className="address-display-box">
+              <div className="address-display-box only-card">
                 <button className=" add-del-btn" onClick={() => deleteAddress(item._id)}>X</button>
                 <h5>{item.fullName}</h5>
                 <p>

@@ -6,7 +6,7 @@ export const Login = () => {
   return token ? (
     <h1>You are Logged in</h1>
   ) : (
-    <div className="outer-cont" style={{backgroundColor:'whitesmoke', height:'100%'}} >
+    <div className="outer-cont" >
       <LoginBox />
     </div>
   );

@@ -2,18 +2,17 @@ import React from "react";
 import {Header} from '../components/Header-home/header'
 import {Footer} from '../components/Footer/footer'
 import { dataAuthors, dataIconsSection } from "./data";
-import { WideBannerDisplay, IconsSection, CategoryDisplay } from "../New D-Components/Home";
+import { WideBannerDisplay, IconsSection, CategoryDisplay, FeaturedProductDisplay } from "../New D-Components/Home";
 
 export const Home = () => {
   return (
     <>
     <Header />
-    <IconsSection data={dataIconsSection}  title={'About Us'}/>
-    <WideBannerDisplay/>
     <CategoryDisplay data={dataAuthors} title={'Famous  Authors '} />
-    
-    
-    <Footer/>
+    <WideBannerDisplay/>
+
+    <FeaturedProductDisplay title={'Featured Books'}/>
+    <IconsSection data={dataIconsSection}  title={'About Us'}/>
     </>
   );
 };

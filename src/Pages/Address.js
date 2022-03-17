@@ -2,8 +2,8 @@ import { AddressDisplay } from "../components/Address/Address Display Box Main/a
 
 export const Address = () => {
     return(
-        <>
+        <div className="bg-color-light"  >
         <AddressDisplay/>
-        </>
+        </div>
     )
 }

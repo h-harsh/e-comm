@@ -32,7 +32,7 @@ export const AddressDisplay = ({ select }) => {
   useEffect(() => fetchAddress(), [addAddress]);
 
   return (
-    <div style={{ marginTop: "2rem" }}>
+    <div style={{ paddingTop: "2rem" }} >
       { allAddresses === null ? (
         <div className="loader-prod">
         <Loader

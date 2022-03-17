@@ -125,6 +125,12 @@ nav{
     font-family: 'Syne Mono', monospace;
     color: var(--primaryColor);
 }
+@media (max-width: 500px) {
+    .book-store{
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }   
+}
 .nav-logo-cont{
     text-decoration: none;
 }

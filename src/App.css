@@ -92,9 +92,7 @@ h6 {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.App {
-  height: 100vh;
-}
+
 .page-title {
   border-bottom: 1px solid black;
   margin-bottom: 1rem;
@@ -183,13 +181,13 @@ h6 {
   width: 15rem;
   margin: 0.6rem;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: #00000040 0 8px 25px;
 }
 .only-card {
   margin: 0.6rem;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: #00000040 0 8px 25px;
 }
 .card-landscape {
@@ -257,3 +255,4 @@ h6 {
 .bg-color-white{
   background-color: white;
 }
+

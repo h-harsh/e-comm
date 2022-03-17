@@ -2,7 +2,7 @@ import { OrderHistoryDisplay } from "../components/Orders/Order History Display/
 
 export const OrderHistory = () => {
     return (
-        <div className="App">
+        <div className="App ">
             <OrderHistoryDisplay/>        
         </div>
     )

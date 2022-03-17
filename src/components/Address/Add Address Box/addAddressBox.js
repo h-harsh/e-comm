@@ -25,9 +25,9 @@ export const AddAddressBox = ({
   };
 
   return (
-    <div className="acc-mang-outer">
+    <div className="acc-mang-outer ">
     {/* <h2>Adding address</h2> */}
-    <div className="acc-mang-p1">
+    <div className="acc-mang-p1 only-card ">
       <form onSubmit={saveAddress}  >
         
         <div className="innzer" >
@@ -74,7 +74,7 @@ export const AddAddressBox = ({
             onChange={(e) => setData({ ...data, state: e.target.value })}
           />
         </div>
-        <input className="nm-btn2 submit-add-btn" type="submit"  />
+        <input className="nm-btn2 submit-add-btn p-button p-button-primary" type="submit"  />
       </form>
       </div>
     </div>

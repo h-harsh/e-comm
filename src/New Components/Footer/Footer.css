@@ -1,0 +1,139 @@
+.bg-gray{
+    background-color: var(--primaryColor);
+}
+.footer-bar {
+  background-color: var(--primary-cl);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+  padding: 0.6rem;
+  border-top: 1px solid gray;
+}
+.footer-bar-cont{
+  background-color: var(--primary-cl);
+  color: white;
+}
+.flex2 {
+  display: flex;
+}
+.flex2 p {
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+.flex1 p {
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+.footer-box a{
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 460px) {
+  .footer-bar {
+    flex-direction: column;
+  }
+
+  .flex1 p {
+    /* font-size: 0.7rem; */
+    text-align: center;
+  }
+
+  .flex2 p {
+    flex-wrap: wrap;
+    font-size: 0.6rem;
+  }
+}
+/* ///////////////////////////////////////////////////////// */
+.footer-logo {
+  /* width: 10rem; */
+  margin: 1.5rem 0;
+
+}
+.logo-skill-india{
+    width: 6rem;
+    padding: 0.5rem;
+}
+.logo-nsdc{
+    width: 10rem;
+    padding: 1rem;
+
+}
+.sub-content-box-icons{
+    margin-bottom: 2.8rem;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+}
+.fab{
+    font-size: 1.2rem;
+    padding: 1rem 1rem 0 1rem;
+}
+.fab-special{
+    padding-left: 0 !important;
+}
+.fero{
+  font-size: 1.2rem;
+    padding: 1rem 1rem 0 1rem;
+}
+footer {
+  display: flex;
+  padding: 2rem 1rem 1.5rem 3rem;
+  background-color: whitesmoke;
+  height: 100%;
+  border-top: 1px solid gray;
+  background-color: var(--primary-cl);
+  color: white !important;
+}
+
+.box-1 {
+  width: 30%;
+}
+.box-2 {
+  width: 23%;
+}
+.box-3 {
+  width: 23%;
+}
+.box-4 {
+  width: 23%;
+}
+
+.sub-content-box {
+  margin: 2.5rem 0;
+}
+.sub-content-box p {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}
+.sub-content-box h5 {
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+}
+p a{
+  text-decoration: none;
+  color:  white;
+}
+.flex2{
+  visibility: hidden;
+}
+
+@media (max-width:1027px) {
+  .box-1 {
+    width: 100%;
+  }
+  .box-2 {
+    width: 100%;
+  }
+  .box-3 {
+    width: 100%;
+  }
+  .box-4 {
+    width: 100%;
+  }
+  footer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

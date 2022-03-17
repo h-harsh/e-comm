@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useNavigate } from "react-router";
 import { reducerFunc } from "./reducerFunction";
 import {baseurl} from '../utils/apiCalls'
+import { toast } from "react-toastify";
 
 const AuthContext = createContext()
 
@@ -32,7 +33,8 @@ export const AuthProvider = ({children}) => {
       setupAuthHeaderForServiceCalls(token)
 
     const loginHandler  = async (userName, password) => {
-        console.log(userName, password)
+        // console.log(userName, password)
+        const toastId = toast.loading("Logging In")
         try{
             const response = await axios.post(`${baseurl}/user/login`,
          {userName, password},
@@ -42,6 +44,7 @@ export const AuthProvider = ({children}) => {
         })
         setLoginState(response.data.status)
         if(response.data.status === "login success"){ 
+            toast.update(toastId, { render: "You are now logged in", type: "success", isLoading: false, autoClose: 2000,  });
             localStorage.setItem("token", JSON.stringify( response.data.token));
             // localStorage.setItem("login", JSON.stringify({loginStatus: true, token: response.data.token}));
             setToken(response.data.token)

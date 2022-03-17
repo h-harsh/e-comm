@@ -24,13 +24,15 @@ export const CartButton = ({ product }) => {
   }, [state]);
 
   const addToCart = async (product) => {
-    console.log(product)
+    // console.log(product)
+    // const toastId = toast.loading("Logging In")
     setloading(true);
     const response = await axios.post(`${baseurl}/cart/${product._id}`, { });
     if (response.status === 200) {
       dispatch({ type: "ADD_TO_CART", payload: product });
       toast.success("Added to cart")
       setloading(false);
+      // toast.update(toastId, { render: "Playlist Deleted", type: "success", isLoading: false, autoClose: 3000,  });
     }
     setloading(false);
     

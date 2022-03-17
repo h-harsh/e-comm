@@ -6,6 +6,7 @@ import { baseurl } from "../../utils/apiCalls";
 import loginImage from "./signup3.svg";
 import { PrimaryButton, SecondaryButton } from "../../New Components";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const SignUpBox = () => {
   const { loginHandler } = useAuth();
@@ -22,7 +23,9 @@ export const SignUpBox = () => {
     password,
     loginHandler
   ) => {
+    const toastId = toast.loading("Signing up")
     try {
+      
       const response = await axios.post(
         `${baseurl}/user/signup`,
         {
@@ -40,11 +43,15 @@ export const SignUpBox = () => {
       );
       console.log(response)
       if (response.status === 200) {
+        toast.update(toastId, { render: "Signup Complete", type: "success", isLoading: false, autoClose: 2000, });
         console.log(userName, password);
         loginHandler(userName, password);
+      } else{
+        toast.update(toastId, { render: "Check the details and try again", type: "error", isLoading: false, autoClose: 2000, });
       }
     } catch (error) {
       console.log(error.response);
+      toast.update(toastId, { render: "Technical Error", type: "error", isLoading: false, autoClose: 2000, });
     }
   };
   console.log(fullName, userName, email, password);

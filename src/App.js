@@ -19,6 +19,7 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { NavBar, MobileNavbar } from "./components";
+import { Footer } from "./New Components";
 
 export default function App() {
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
@@ -39,7 +40,6 @@ export default function App() {
   }, [pathname])
   return (
     <div>
-      {/* <NavBar /> */}
       <NavBar
         mobileMenuActive={mobileMenuActive}
         handleMobileMenuActive={handleMobileMenuActive}
@@ -48,7 +48,7 @@ export default function App() {
         mobileMenuActive={mobileMenuActive}
         handleMobileMenuActive={handleMobileMenuActive}
       />
-      <main style={{  height: "100vh" }}>
+      <main style={{  minHeight: "100vh"  }} className="bg-color-light"  >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="products" element={<Products />} />
@@ -63,6 +63,7 @@ export default function App() {
         </Routes>
         <ToastContainer position="bottom-right" theme="dark" autoClose={3000} />
       </main>
+      <Footer/>
     </div>
   );
 }

@@ -37,19 +37,21 @@ const dataIconsSection = [
         icon:'BsFillBookFill',
         color:'rgb(39, 200, 234)',
         title:'Tons of Books',
-        description:'From advanced selectors to generated content to web fonts, and from gradients, shadows, and rounded corners. to elegant animations. ,'
+        // description:'From advanced selectors to generated content to web fonts, and from gradients, shadows, and rounded corners. to elegant animations. ,'
+        description:'Here is a treasure for an investigative mind..,From fiction too non-fiction, mystries to sleep virner everything you wish to read is here ,'
     },
     {
         icon:'BsFillBookmarksFill',
         color:'rgb(134, 225, 84)',
         title:'Hundreds of Authors',
-        description:' To elegant animations. , CSS3 holds a universe of creative possibilities. No one can better guide you through.'
+        // description:' To elegant animations. , CSS3 holds a universe of creative possibilities. No one can better guide you through.'
+        description:' Good books are just like good friends and here we are having books of all the authors, somne of them you may not have geard of.'
     },
     {
         icon:'BsFillPencilFill',
         color:'rgb(225, 220, 84)',
-        title:'Easily Bookmarked',
-        description:'Shadows, and rounded corners. to elegant animations. , CSS3 holds a universe of creative possibilities. No one can better guide you through.'
+        title:'Easily Delivered',
+        description:'Books make your life easier.Make your books your best friend Get the right book for you.  No one can better guide you through.'
     },
 ]
 
