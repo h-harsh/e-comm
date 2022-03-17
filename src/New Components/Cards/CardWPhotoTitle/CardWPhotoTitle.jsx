@@ -1,5 +1,4 @@
 import "./cardWPhotoTitle.css";
-import { PrimaryButton } from "../../Buttons/Buttons";
 
 const CardWPhotoTitle = ({ title, name, image, height, titp, team }) => {
   return (

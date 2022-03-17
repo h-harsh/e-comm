@@ -4,8 +4,7 @@ import { useAuth } from "../../Auth/authContetxt";
 import "./signupBox.css";
 import { baseurl } from "../../utils/apiCalls";
 import loginImage from "./signup3.svg";
-import { PrimaryButton, SecondaryButton } from "../../New Components";
-import { Link } from "react-router-dom";
+import { PrimaryButton } from "../../New Components";
 import { toast } from "react-toastify";
 
 export const SignUpBox = () => {
@@ -59,7 +58,7 @@ export const SignUpBox = () => {
   return (
     <div className="login-container only-card">
       <div className="login-image-container">
-        <img className="login-image" src={loginImage} />
+        <img className="login-image" src={loginImage} alt="err" />
       </div>
 
       <div className="login-data-container">

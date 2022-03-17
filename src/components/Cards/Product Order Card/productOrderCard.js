@@ -1,7 +1,5 @@
 import './productOrderCard.css'
 
-import { baseurl } from "../../../utils/apiCalls";
-
 export const ProductOrderCard = ({ product }) => {
 
   return (

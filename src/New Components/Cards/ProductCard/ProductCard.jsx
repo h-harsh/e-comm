@@ -1,7 +1,7 @@
 import './productCard.css';
 
 
-import { CartButton, WishButton, ViewItem } from '../../../components/Buttons';
+import { CartButton, WishButton } from '../../../components/Buttons';
 import { Link } from "react-router-dom";
 
 export const ProductCard = ({ product }) => {

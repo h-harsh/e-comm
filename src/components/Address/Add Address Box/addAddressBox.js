@@ -16,7 +16,7 @@ export const AddAddressBox = ({
     try {
       const response = await axios.post(`${baseurl}/address/new`, { data });
       fetchAddress();
-      // console.log(response);
+      console.log(response);
       toast.success("Address added")
     } catch (error) {
       console.log(error.response.data);

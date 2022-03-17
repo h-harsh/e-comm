@@ -5,7 +5,6 @@ import axios from "axios";
 import { useState } from "react";
 import { baseurl } from "../../utils/apiCalls";
 import { toast } from "react-toastify";
-import {PrimaryButton, SecondaryButton} from '../../New Components'
 
 export const CartCard = ({ product }) => {
   const { dispatch } = useCart();

@@ -2,12 +2,12 @@ import { ProductOrderCard } from "../Product Order Card/productOrderCard";
 import "./orderCard.css";
 
 export const OrderCard = ({ item }) => {
-  const options = {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  };
+  // const options = {
+  //   weekday: "long",
+  //   year: "numeric",
+  //   month: "long",
+  //   day: "numeric",
+  // };
 //    {/* <p>{item.date.toLocaleDateString("en-US", options)}</p> */}
   return (
     <div className="order-main-box  only-card ">

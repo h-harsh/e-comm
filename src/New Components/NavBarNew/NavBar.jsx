@@ -2,7 +2,7 @@ import "./NavBar.css";
 // import { OrangeButton } from "../../utils";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ourPrograms, ourServices, aboutUs, myAccount } from "./data";
+import { myAccount } from "./data";
 import { PrimaryButton, SecondaryButton } from "../../New Components";
 import { useAuth } from "../../Auth/authContetxt";
 import { useCart } from "../../components/Cart/cartContext";

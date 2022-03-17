@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 export const LoginBox = () => {
   const [userName, setUserName] = useState("pharsh");
   const [password, setPassword] = useState("Harsh123");
-  const { loginHandler, loginState } = useAuth();
+  const { loginHandler } = useAuth();
 
   return (
     <div className="login-container only-card">
       <div className="login-image-container">
-        <img className="login-image" src={loginImage} />
+        <img className="login-image" src={loginImage} alt="res err" />
       </div>
 
       <div className="login-data-container">
@@ -53,35 +53,4 @@ export const LoginBox = () => {
   );
 };
 
-// return (
-//   <div className="login-box">
-//     <input
-//       className="login-item"
-//       placeholder="Username"
-//       type="text"
-//       onChange={(event) => setUserName(event.target.value)}
-//     />
 
-//     <input
-//       className="login-item"
-//       placeholder="Password"
-//       type="password"
-//       onChange={(event) => setPassword(event.target.value)}
-//     />
-
-//     <button
-//       className="login-item nm-btn2 an"
-//       onClick={() => loginHandler(userName, password)}
-//     >
-//       Login
-//     </button>
-//     <button
-//       className="login-item nm-btn2 an"
-//       onClick={() => loginHandler("pharsh", "Harsh123")}
-//     >
-//       Login as Guest
-//     </button>
-//     <h2 className="login-item ">{loginState}</h2>
-//   </div>
-// );
-// };

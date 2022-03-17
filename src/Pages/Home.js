@@ -1,6 +1,5 @@
 import React from "react";
 import {Header} from '../components/Header-home/header'
-import {Footer} from '../components/Footer/footer'
 import { dataAuthors, dataIconsSection } from "./data";
 import { WideBannerDisplay, IconsSection, CategoryDisplay, FeaturedProductDisplay } from "../New D-Components/Home";
 

@@ -1,7 +1,5 @@
-import { Route, Navigate } from "react-router-dom";
-import { InToast } from "../components/Toast/toast"; 
+import { Route, Navigate } from "react-router-dom"; 
 import {useAuth} from '../Auth/authContetxt';
-import { toast } from "react-toastify";
 
 export const PrivateRoute = ({ path, ...props }) => {
   const { token } = useAuth();

@@ -1,17 +1,14 @@
-// import { OrangeButton } from "../../utils/buttons";
+
+/* eslint-disable */
 import "./MobileNavbar.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { myAccount } from "./data";
 import { useAuth } from "../../Auth/authContetxt";
-import { useCart } from "../../components/Cart/cartContext";
-import { useWish } from "../../components/Wishlist/wishContext";
 import { PrimaryButton, SecondaryButton } from "../Buttons/Buttons";
 
 const MobileNavbar = ({ mobileMenuActive, handleMobileMenuActive }) => {
   const { token, logoutHandler } = useAuth();
-  const { state } = useCart();
-  const { wishState } = useWish();
   const [ourServicesSubMenuDisplay, setOurServicesSubMenuDisplay] =
     useState(false);
 
@@ -70,7 +67,7 @@ const MobileNavbar = ({ mobileMenuActive, handleMobileMenuActive }) => {
                 <Link to="/wishlist">Wishlist</Link>
               </li>
 
-              <a className="nav-item-m">
+              <a  className="nav-item-m">
                 <SecondaryButton text="Logout" clickHandler={logoutHandler} />
               </a>
             </>

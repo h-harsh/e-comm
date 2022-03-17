@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Footer } from "../components/Footer/footer";
 import { ProductDetailsCard } from "../components/Cards/productDetailsCard";
 import { useParams } from "react-router-dom";

@@ -1,15 +1,14 @@
-import { useState } from "react";
+
 import { WishButton2, CartButton } from "../Buttons/index";
 import "./cards.css";
 
 export const ProductDetailsCard = ({ product }) => {
-  const [arrow, setArrow] = useState("fas fa-chevron-up");
   return (
     <div className="out-box">
       <div className="product-details">
         <div className="product-details-sub">
           <div className=" c-img">
-            <img className="d-img " src={product.image} />
+            <img className="d-img " src={product.image} alt="error"/>
           </div>
           <div className={"container c-details big"}>
             <div className="title">

@@ -1,4 +1,5 @@
-import './cart.css'
+/* eslint-disable */
+import './cart.css';
 import { useCart } from "./cartContext";
 import { CartCard } from "../Cards/cartProductCard";
 import "./cart.css";
@@ -36,8 +37,7 @@ export const CartDisplay = () => {
         })
         .reduce((a, b) => a + b, 0)
     );
-  });
-console.log(state)
+  }, );
   return (
     <div className="cart-page-outer">
       <div>

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "../View Address Box/viewAddressBox.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -12,7 +13,7 @@ export const SelectAddressBox = ({
   allAddresses,
   fetchAddress,
 }) => {
-  const {state, dispatch} =useCart()
+  const { dispatch} =useCart()
   const [selectedAddressId, setSelectedAddressId] = useState();
   const [order_id, setOrder_id] = useState();
   const [paymentVerified, setPaymentVerified] = useState(false);

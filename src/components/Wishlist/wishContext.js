@@ -3,7 +3,7 @@ import { wishListReducer } from "./wishlistReducer";
 import {baseurl} from '../../utils/apiCalls'
 import axios from 'axios'
 import { useAuth } from "../../Auth/authContetxt";
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
  
 export const WishContext = createContext();
 

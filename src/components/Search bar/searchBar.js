@@ -1,5 +1,4 @@
 import { useFilter } from "../Filters/filterContext";
-import { baseurl } from "../../utils/apiCalls";
 import './serachBar.css'
 
 export const SearchBar = ({className}) => {

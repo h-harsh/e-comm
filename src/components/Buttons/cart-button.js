@@ -6,7 +6,7 @@ import { baseurl } from "../../utils/apiCalls";
 import { useAuth } from "../../Auth/authContetxt";
 import { InToast } from "../Toast/toast";
 import './buttons.css'
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 
 export const CartButton = ({ product }) => {
   const { state, dispatch } = useCart();
