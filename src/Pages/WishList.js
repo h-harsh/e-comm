@@ -1,13 +1,11 @@
-import {WishDisplay} from '../components/Wishlist/wishDisplay'
-import {Footer} from '../components/Footer/footer'
+import { WishDisplay } from "../components/Wishlist/wishDisplay";
 
 export const WishList = () => {
-    return(
-        <>
-        <div style={{minHeight:"85vh"}} className="bg-color-light">
-            <WishDisplay />
-        </div>
-            <Footer />
-        </>
-    )
-}
+  return (
+    <>
+      <div style={{ minHeight: "85vh" }} className="bg-color-light">
+        <WishDisplay />
+      </div>
+    </>
+  );
+};

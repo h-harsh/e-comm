@@ -1,7 +1,6 @@
 import './common.css'
 import { FilterDisplay } from "../components/Filters/filterDisplay";
 import { ProductsDisplay } from "../components/allProducts";
-import { Footer } from "../components/Footer/footer";
 import { SearchBar } from "../components/Search bar/searchBar";
 
 export const Products = () => {
@@ -18,7 +17,6 @@ export const Products = () => {
           <ProductsDisplay />
         </div>
       </div>
-      <Footer />
     </>
   );
 };

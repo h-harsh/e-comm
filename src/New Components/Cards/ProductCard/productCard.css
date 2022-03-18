@@ -52,3 +52,14 @@
     flex-direction: row;
     margin-bottom: 1rem;
 }
+
+@media (max-width:600px){
+    .new-product-card{
+        width: 15rem;
+        background-color: white;
+    }
+    
+    .prod-img-dib{
+        width: 13rem;
+    }
+}

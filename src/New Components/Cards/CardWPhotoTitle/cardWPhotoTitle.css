@@ -7,7 +7,7 @@
     overflow: hidden;
     background-color: white;
     margin: 0.6rem;
-    width: 11.3rem;
+    width: 13rem;
     
 }
 
@@ -56,7 +56,7 @@
 } */
 @media (max-width:600px){
     .focus-area-card-slim{
-        width: 9.5rem;
+        width: 12rem;
         margin: 0.4rem;
         height: 17rem ;
     }
