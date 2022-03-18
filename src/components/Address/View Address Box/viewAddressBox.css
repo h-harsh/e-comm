@@ -1,36 +1,41 @@
-.address-display-cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* padding: 2rem 0; */
-    
+.address-display-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 2rem 0; */
 }
 
-.address-display-box{
-    width: 25rem;
-    padding: 1rem;
-    margin: 0.5rem;
-    position: relative;
-    box-shadow: #00000040 0 4px 15px;
-    background-color: white;
-    min-height: 7rem;
+.address-display-box {
+  width: 25rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  position: relative;
+  box-shadow: #00000040 0 4px 15px;
+  background-color: white;
+  min-height: 7rem;
 }
 
-.add-del-btn{
-    position: absolute;
-    right: 1rem;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: white;
-    padding: 0.2rem;
+.add-del-btn {
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  padding: 0.2rem;
 }
-.add-del-btn:hover{
-    color: white;
-    background-color: var(--primaryColor);
-    transition: 0.5s;
+.add-del-btn:hover {
+  color: white;
+  background-color: var(--primaryColor);
+  transition: 0.5s;
 }
 
-.add-address-btn{
-    font-size: 1rem;
-    margin-bottom: 2.5rem;
+.add-address-btn {
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 500px) {
+  .address-display-box {
+      width: 18rem;
+  }
 }
