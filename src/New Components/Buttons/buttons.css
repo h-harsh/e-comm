@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-.p-button-primary{
+.p-button-primary {
   color: #ffffff;
   background-color: var(--primaryColor);
   border: 2px solid var(--primaryColor);
@@ -21,11 +21,25 @@
   border: 2px solid var(--primaryAccentColor);
 }
 
-.p-button-secondary{
+.p-button-secondary {
   background-color: white;
   color: var(--primaryColor) !important;
   border: 2px solid var(--primaryColor);
 }
-.p-button-secondary:hover{
-  background-color:var(--bgLightColor) !important ;
+.p-button-secondary:hover {
+  background-color: var(--bgLightColor) !important ;
+}
+
+@media screen and (max-width: 375px) {
+  .p-button {
+    padding: 5px 17px;
+    border-radius: 24px;
+    font-size: 1.1rem;
+    line-height: 25px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .nm-btn2{
+    min-width: 8rem;
+  }
 }

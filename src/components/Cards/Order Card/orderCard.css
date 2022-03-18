@@ -32,6 +32,19 @@
 }
 @media (max-width: 375px) {
   .order-main-box {
-    max-width: 20rem;
+    max-width: 18rem;
+  }
+  .horiz-card{
+    margin: 1rem 0;
+    padding: 0.5rem;
+  }
+  .horiz-prod-sub-in{
+    padding-left: 0.5rem;
+  }
+  .order-p1{
+    flex-direction: column;
+  }
+  .order-p2{
+    flex-direction: column;
   }
 }
