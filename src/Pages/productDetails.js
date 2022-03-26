@@ -38,7 +38,6 @@ export const ProductDetails = () => {
         </div>
       )}
       {/* {loader ?   <ProductDetailsCard product={product} /> : <h1>Load hora hai</h1>} */}
-      <Footer />
     </div>
   );
 };
