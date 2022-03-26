@@ -13,7 +13,7 @@ export const OrderHistoryDisplay = () => {
   useEffect(() => {
     (async function () {
       const response = await axios.get(`${baseurl}/order`);
-      setOrders(response.data.allOrders);
+      setOrders(response.data.allOrders.reverse());
     })();
   }, [token]);
   console.log(orders);

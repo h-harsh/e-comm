@@ -103,42 +103,46 @@ console.log(user)
   return (
     <div>
       {!payment ? (
-        <div className="address-display-cont">
+        <div className="address-display-cont" >
           <h1 style={{marginBottom:'1rem'}} >Select a Address for Delivery</h1>
           <button
-            className="nm-btn2 add-address-btn"
+            className="p-button p-button-secondary"
             onClick={() => setAddAddress(true)}
           >
             Add new address
           </button>
           {allAddresses.length > 0 ? (
-            allAddresses.map((item) => {
-              return (
-                <div className="address-display-box">
-                  <input
-                    name="address"
-                    type="radio"
-                    value={item._id}
-                    onChange={(e) => addressSelector(e)}
-                  />
-                  <h5>{item.fullName}</h5>
-                  <p>
-                    {item.buildingName}, {item.area}
-                  </p>
-                  <p>{item.landmark}</p>
-                  <p>
-                    {item.city}, {item.pinCode}, {item.state}
-                  </p>
-                  <p></p>
-                </div>
-              );
-            })
+            <div style={{marginTop:'1rem', marginBottom:'1.5rem'}} >
+              {
+                allAddresses.map((item) => {
+                  return (
+                    <div className="address-display-box"  >
+                      <input
+                        name="address"
+                        type="radio"
+                        value={item._id}
+                        onChange={(e) => addressSelector(e)}
+                      />
+                      <h5>{item.fullName}</h5>
+                      <p>
+                        {item.buildingName}, {item.area}
+                      </p>
+                      <p>{item.landmark}</p>
+                      <p>
+                        {item.city}, {item.pinCode}, {item.state}
+                      </p>
+                      <p></p>
+                    </div>
+                  );
+                })
+              }
+            </div>
           ) : (
             <h1>No Addresses added yet</h1>
           )}
           <button
             disabled={selectedAddressId ? false : true}
-            className={selectedAddressId ? "nm-btn2" : "nm-btn2 btn2-disabled"}
+            className={selectedAddressId ? "p-button p-button-primary" : "p-button p-button-secondary"}
             onClick={() => paymentHandler()}
           >
             Continue 

@@ -3,7 +3,7 @@
 .login-container {
   display: flex;
   /* border: 2px solid black; */
-  max-width: 50rem;
+  width: 50rem;
   height: 32rem;
   margin-top: 3.5rem;
 }
