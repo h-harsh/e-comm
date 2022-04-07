@@ -32,10 +32,10 @@ export const FilterProvider = ({ children }) => {
 
   const sortingData = (productsList, sortBy) => {
     if (sortBy === "HIGH-TO-LOW") {
-      return productsList.sort((a, b) => a.price - b.price);
+      return productsList.sort((a, b) => b.price - a.price);
     }
     if (sortBy === "LOW-TO-HIGH") {
-      return productsList.sort((a, b) => b.price - a.price);
+      return productsList.sort((a, b) => a.price - b.price);
     }
     return productsList;
   };
